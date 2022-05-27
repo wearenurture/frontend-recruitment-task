@@ -1,0 +1,9 @@
+.container{
+    display: flex;
+    justify-content: space-around;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+.text_button{
+    max-width: 380px;
+}
