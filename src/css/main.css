@@ -1,9 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .container{
-    display: flex;
-    justify-content: space-around;
+
     max-width: 1440px;
-    margin: 0 auto;
+    margin: 96px auto;
+    font-family: "Roboto Light" , sans-serif;
+}
+.hide{
+    position: relative;
+    display: flex;
+    z-index: 1;
 }
 .text_button{
+    padding-top: 40px;
+    margin-left: 95px;
     max-width: 380px;
+}
+.lorem_h1{
+    font-size: 42px;
+}
+.about_text{
+    margin: 24px 0 32px 0;
+    font-size: 16px;
+}
+.button_popup{
+    background: #E4C1AE;
+    color: #FFFFFF;
+    padding: 16px 40px;
+    border: none;
+    border-radius: 32px;
+    cursor: pointer;
+    font-weight: 700;
+}
+.popup{
+    inset:0;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+    background: rgba(0,0,0,0.5);
+}
+.box_alert{
+    max-width: 920px;
+    max-height: 210px;
+    background: white;
+    position: absolute;
+    z-index: 2;
+    inset: 475px 820px ;
 }
