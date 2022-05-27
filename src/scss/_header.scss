@@ -1,0 +1,93 @@
+.container {
+    max-width:1440px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    font-family: $main-font;
+
+    .header {
+        margin-top:100px;
+        display:flex;
+        align-items:center;
+        gap:96px;
+        color:$color-black;
+        .photo {
+            width:505px;
+            height:330px;
+        }
+    
+        .content {
+            display:flex;
+            flex-direction:column;
+    
+            &__title {
+                font-size:2.625em;
+                font-weight:700;
+                margin-bottom:25px;
+            }
+    
+            &__description {
+                font-weight:300;
+                margin-bottom:30px;
+                max-width:380px;
+                line-height:1.5em;
+            }
+    
+            .button {
+                padding: 12px 30px;
+                width:128px;
+                height:48px;
+                border-radius:50px;
+                background-color: $color-button;
+                color:$color-white;
+                font-weight:700;
+                border-color:transparent;
+            }
+        }
+    }
+
+    .popup {
+        background-color:$color-overlay;
+        width:100%;
+        height:100%;
+        position:absolute;
+        top:0;
+        left:0;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+
+        .alert {
+            width:920px;
+            height:210px;
+            background-color:$color-white;
+            position:relative;
+
+            &__title {
+                font-size:2.625em;
+                font-weight:700;
+                margin-top:56px;
+                margin-left:95px;
+            }
+
+            &__message {
+                font-weight:300;
+                margin-top:24px;
+                margin-left:95px;
+
+                span {
+                    font-weight:500;
+                }
+            }
+
+        }
+
+        .alert::after {
+            content: "✕";
+            position:absolute;
+            top:30px;
+            left:860px;
+        }
+    }
+}

@@ -1,4 +1,7 @@
-.title {
-    color:red;
-    font-size:12em;
-}
+// settings
+@import 'settings/reset';
+@import 'settings/colors';
+@import 'settings/fonts';
+
+//components
+@import 'header';
