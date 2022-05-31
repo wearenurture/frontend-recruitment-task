@@ -1,1 +1,1 @@
-const button=document.getElementById("button");console.log(button);
+const button=document.getElementById("button"),count=document.getElementById("count"),popup=document.getElementById("popup");let counter=0;const handleClick=()=>{counter++,popup.classList.add("popup"),count.innerText=counter+" times"},handleClose=e=>{e.target.closest(".alert")||popup.classList.remove("popup")};button.addEventListener("click",handleClick),popup.addEventListener("click",handleClose);
