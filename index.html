@@ -4,8 +4,36 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>[Name] [Surname] - Recruitment task</title>
+    <title>Katarzyna Gorgolewska - Recruitment task</title>
+    <link rel="stylesheet" href="dist/main.css" class="css">
 </head>
 <body>
-
+    <div class="container">
+        <div class="header">
+            <img class="photo" src="images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_1400.jpg"/>
+            <div class="content">
+                <h1 class="content__title">Lorem Ipsum</h1>
+                <p class="content__description">
+                Infinitely scalable, feature-rich and cloud-native data management 
+                and protection for modern and legacy infrastructures and SaaS platforms,
+                managed via a single app with no hardware required.
+                </p>
+                <button type="submit" id="button" class="button">Button</button>
+            </div>
+            
+        </div>
+        <div class="popup-closed" id="popup">
+                <div class="popup-background" id="popup-close"></div>
+                <div class="alert">
+                    <h2 class="alert__title">
+                        Alert!
+                    </h2>
+                    <p class="alert__message">
+                        You have clicked <span id="count" >{counter} times</span> to related button.
+                    </p>
+                    <button class="reset-closed" id="reset">Reset</button>
+                </div>
+        </d>
+    </div>
+    <script src="./src/js/main.js"></script>
 </body>
