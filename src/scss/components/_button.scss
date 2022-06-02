@@ -1,0 +1,17 @@
+@import "../utils/variables";
+
+.main__button {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 16px 40px;
+  gap: 10px;
+  position: absolute;
+  width: 128px;
+  height: 48px;
+  left: 830px;
+  top: 338px;
+  background: $button-color;
+  border-radius: 32px;
+  border: none;
+}
