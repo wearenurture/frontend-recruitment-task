@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"main.css","sourcesContent":[]}
+{"version":3,"sources":["main.scss"],"names":[],"mappings":"AAAA,MACE,UAAW","file":"main.css","sourcesContent":[".test {\r\n  color: blue;\r\n}\r\n"]}
