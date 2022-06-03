@@ -1,49 +1,12 @@
-@import "./components/button";
+//base
+
 @import "./base/typography";
-@import "./utils/variables";
 
-.main {
-  width: 1440px;
-  height: 960px;
-  position: relative;
+// layout
 
-  color: blue;
-  &__image {
-    position: absolute;
-    width: 505px;
-    height: 330px;
-    left: 230px;
-    top: 96px;
-  }
+@import "./layout/imageLayout";
 
-  &__description {
-    &--header {
-      position: absolute;
-      width: 380px;
-      height: 50px;
-      left: calc(50% - 380px / 2 + 300px);
-      top: calc(50% - 50px / 2 - 319px);
+//components
 
-      font-style: normal;
-      font-weight: 700;
-      font-size: 42px;
-      line-height: 120%;
-
-      color: #121212;
-    }
-
-    &--paragraph {
-      position: absolute;
-      width: 380px;
-      height: 96px;
-      left: calc(50% - 380px / 2 + 300px);
-      top: calc(50% - 96px / 2 - 222px);
-      font-family: $roboto-font;
-      font-style: normal;
-      font-weight: 300;
-      font-size: 16px;
-      line-height: 150%;
-      color: #121212;
-    }
-  }
-}
+@import "./components/button";
+@import "./components/modal";
