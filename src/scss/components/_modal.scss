@@ -1,3 +1,17 @@
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  display: grid;
+  place-items: center;
+
+  /* Dark #1 */
+
+  background: #121212;
+  opacity: 0.5;
+}
 .modal {
   position: absolute;
   width: 920px;
@@ -5,4 +19,31 @@
   left: 260px;
   top: 375px;
   background: #ffffff;
+
+  &__alert {
+    position: absolute;
+    width: 380px;
+    height: 50px;
+    left: calc(50% - 380px / 2 - 175px);
+    top: calc(50% - 50px / 2 - 24px);
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 120%;
+    color: #121212;
+  }
+  &__info {
+    position: absolute;
+    width: 380px;
+    height: 24px;
+    left: calc(50% - 380px / 2 - 175px);
+    top: calc(50% - 24px / 2 + 37px);
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 150%;
+    color: #121212;
+  }
 }
