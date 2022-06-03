@@ -1,4 +1,4 @@
-//base
+// base
 
 @import "./base/typography";
 
@@ -6,7 +6,11 @@
 
 @import "./layout/imageLayout";
 
-//components
+// components
 
 @import "./components/button";
 @import "./components/modal";
+
+// utils
+
+@import "./utils/helperClasses";

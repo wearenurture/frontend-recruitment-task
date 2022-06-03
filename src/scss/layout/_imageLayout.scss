@@ -3,7 +3,6 @@
   width: 1440px;
   height: 960px;
   position: relative;
-
   color: blue;
   &__image {
     position: absolute;
@@ -20,12 +19,10 @@
       height: 50px;
       left: calc(50% - 380px / 2 + 300px);
       top: calc(50% - 50px / 2 - 319px);
-
       font-style: normal;
       font-weight: 700;
       font-size: 42px;
       line-height: 120%;
-
       color: #121212;
     }
 
