@@ -1,9 +1,5 @@
 // model
 
-const state = {
-  counter: 0,
-};
-
 // view
 
 class imageView {
@@ -16,13 +12,14 @@ class imageView {
     this.counter = counter;
     this.showModal();
     this.hideModal();
+    this.cacheCounter();
   }
 
   showModal() {
     this.showModalButton.addEventListener("click", () => {
       this.counter++;
+      this.cacheCounter();
       this.toggleModal();
-      console.log(this.modalInfo);
       this.modalInfo.textContent = `You have clicked ${this.counter} times to related button`;
     });
   }
@@ -37,8 +34,10 @@ class imageView {
     this.overlay.classList.toggle("hidden");
     this.modal.classList.toggle("hidden");
   }
+
+  cacheCounter() {
+    localStorage.setItem("counter", this.counter);
+  }
 }
 
-const imageViewInstance = new imageView(state.counter);
-
-// controller
+new imageView(localStorage.getItem("counter") || 0);
