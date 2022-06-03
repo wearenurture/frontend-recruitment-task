@@ -1,1 +1,1 @@
-console.log("hi");const test=document.querySelector(".test");console.log(test);
+const state={counter:0},addCounterOnClick=()=>{state.counter++};class imageView{showModalButton=document.querySelector(".main__button");constructor(){this.showModal()}showModal(){this.showModalButton.addEventListener("click",()=>{console.log("Hey")})}}const imageViewInstance=new imageView;
