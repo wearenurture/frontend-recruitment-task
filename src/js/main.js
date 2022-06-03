@@ -3,7 +3,7 @@
 // view
 
 class imageView {
-  main = document.querySelector(".main");
+  container;
   showModalButton;
   modal;
   overlay;
@@ -11,7 +11,8 @@ class imageView {
   modalInfo;
   resetButton;
   imageUrl;
-  constructor(counter, imageUrl) {
+  constructor(counter, imageUrl, container) {
+    this.container = container;
     this.imageUrl = imageUrl;
     this.createMarkup();
 
@@ -72,7 +73,7 @@ class imageView {
   }
 
   createMarkup() {
-    this.main.insertAdjacentHTML(
+    this.container.insertAdjacentHTML(
       "afterbegin",
 
       `
@@ -110,5 +111,6 @@ class imageView {
 
 new imageView(
   localStorage.getItem("counter") || 0,
-  "./images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_1400.jpg"
+  "./images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_1400.jpg",
+  document.querySelector(".main")
 );
