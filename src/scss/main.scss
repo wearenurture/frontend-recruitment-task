@@ -1,9 +1,7 @@
 // base
 @import "./base/base";
 @import "./base/typography";
-
-// layout
-
+@import "./base/breakpoints.scss"; // layout
 @import "./layout/imageLayout";
 
 // components

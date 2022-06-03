@@ -12,4 +12,7 @@
   left: 830px;
   top: 338px;
   @include buttonStyle;
+  @media only screen and (max-width: $bp-huge) {
+    position: relative;
+  }
 }

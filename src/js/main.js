@@ -1,4 +1,5 @@
-// model
+const description =
+  " Infinitely scalable, feature-rich and cloud-native data management and protection for modern and legacy infrastructures and SaaS platforms, managed via a single app with no hardware required.";
 
 // view
 
@@ -10,10 +11,16 @@ class imageView {
   counter;
   modalInfo;
   resetButton;
+  title;
   imageUrl;
-  constructor(counter, imageUrl, container) {
+  alt;
+  description;
+  constructor(counter, imageUrl, container, alt, description, title) {
     this.container = container;
+    this.title = title;
     this.imageUrl = imageUrl;
+    this.alt = alt;
+    this.description = description;
     this.createMarkup();
 
     this.showModalButton = document.querySelector(".main__button");
@@ -75,24 +82,20 @@ class imageView {
   createMarkup() {
     this.container.insertAdjacentHTML(
       "afterbegin",
-
       `
        <img
           class="main__image"
-          alt="ocean image"
+          alt=${this.alt}
           src=${this.imageUrl}
         /> <div class="main__description">
-          <h1 class="main__description--header">Lorem Ipsum</h1>
+          <h1 class="main__description--header">${this.title}</h1>
           <p class="main__description--paragraph">
-            Infinitely scalable, feature-rich and cloud-native data management
-            and protection for modern and legacy infrastructures and SaaS
-            platforms, managed via a single app with no hardware required.
+           ${this.description}
           </p>
         </div>
         <button class="main__button">Button</button>
       </div>
       <div class="overlay hidden"></div>
-
       <div class="modal hidden">
         <h2 class="modal__alert">Alert!</h2>
         <div class="modal__box">
@@ -101,9 +104,7 @@ class imageView {
             <div class="modal__vector--2"></div>
           </div>
         </div>
-
         <p class="modal__info"></p>
-
         <button class="modal__reset">Reset</button>`
     );
   }
@@ -112,5 +113,8 @@ class imageView {
 new imageView(
   localStorage.getItem("counter") || 0,
   "./images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_1400.jpg",
-  document.querySelector(".main")
+  document.querySelector(".main"),
+  "ocean image",
+  description,
+  "Lorem Ipsum"
 );

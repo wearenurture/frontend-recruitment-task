@@ -1,20 +1,17 @@
-class imageView{container;showModalButton;modal;overlay;counter;modalInfo;resetButton;imageUrl;constructor(e,t,a){this.container=a,this.imageUrl=t,this.createMarkup(),this.showModalButton=document.querySelector(".main__button"),this.modal=document.querySelector(".modal"),this.overlay=document.querySelector(".overlay"),this.modalInfo=document.querySelector(".modal__info"),this.resetButton=document.querySelector(".modal__reset"),this.counter=e,this.showModal(),this.onOverlayClick(),this.cacheCounter(),this.reset()}showModal(){this.showModalButton.addEventListener("click",()=>{this.counter++,this.cacheCounter(),this.toggleModal(),this.updateText(),this.checkCounterIsFive()})}onOverlayClick(){this.overlay.addEventListener("click",()=>{this.toggleModal()})}toggleModal(){this.overlay.classList.toggle("hidden"),this.modal.classList.toggle("hidden")}cacheCounter(){localStorage.setItem("counter",this.counter)}updateText(){this.modalInfo.textContent=`You have clicked ${this.counter} times to related button`}reset(){this.resetButton.addEventListener("click",()=>{this.counter=0,this.cacheCounter(),this.updateText(),this.checkCounterIsFive()})}checkCounterIsFive(){this.counter<5&&this.resetButton.classList.add("hidden"),5<=this.counter&&this.resetButton.classList.remove("hidden")}createMarkup(){this.container.insertAdjacentHTML("afterbegin",`
+const description=" Infinitely scalable, feature-rich and cloud-native data management and protection for modern and legacy infrastructures and SaaS platforms, managed via a single app with no hardware required.";class imageView{container;showModalButton;modal;overlay;counter;modalInfo;resetButton;title;imageUrl;alt;description;constructor(t,e,i,s,a,o){this.container=i,this.title=o,this.imageUrl=e,this.alt=s,this.description=a,this.createMarkup(),this.showModalButton=document.querySelector(".main__button"),this.modal=document.querySelector(".modal"),this.overlay=document.querySelector(".overlay"),this.modalInfo=document.querySelector(".modal__info"),this.resetButton=document.querySelector(".modal__reset"),this.counter=t,this.showModal(),this.onOverlayClick(),this.cacheCounter(),this.reset()}showModal(){this.showModalButton.addEventListener("click",()=>{this.counter++,this.cacheCounter(),this.toggleModal(),this.updateText(),this.checkCounterIsFive()})}onOverlayClick(){this.overlay.addEventListener("click",()=>{this.toggleModal()})}toggleModal(){this.overlay.classList.toggle("hidden"),this.modal.classList.toggle("hidden")}cacheCounter(){localStorage.setItem("counter",this.counter)}updateText(){this.modalInfo.textContent=`You have clicked ${this.counter} times to related button`}reset(){this.resetButton.addEventListener("click",()=>{this.counter=0,this.cacheCounter(),this.updateText(),this.checkCounterIsFive()})}checkCounterIsFive(){this.counter<5&&this.resetButton.classList.add("hidden"),5<=this.counter&&this.resetButton.classList.remove("hidden")}createMarkup(){this.container.insertAdjacentHTML("afterbegin",`
        <img
           class="main__image"
-          alt="ocean image"
+          alt=${this.alt}
           src=${this.imageUrl}
         /> <div class="main__description">
-          <h1 class="main__description--header">Lorem Ipsum</h1>
+          <h1 class="main__description--header">${this.title}</h1>
           <p class="main__description--paragraph">
-            Infinitely scalable, feature-rich and cloud-native data management
-            and protection for modern and legacy infrastructures and SaaS
-            platforms, managed via a single app with no hardware required.
+           ${this.description}
           </p>
         </div>
         <button class="main__button">Button</button>
       </div>
       <div class="overlay hidden"></div>
-
       <div class="modal hidden">
         <h2 class="modal__alert">Alert!</h2>
         <div class="modal__box">
@@ -23,7 +20,5 @@ class imageView{container;showModalButton;modal;overlay;counter;modalInfo;resetB
             <div class="modal__vector--2"></div>
           </div>
         </div>
-
         <p class="modal__info"></p>
-
-        <button class="modal__reset">Reset</button>`)}}new imageView(localStorage.getItem("counter")||0,"./images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_1400.jpg",document.querySelector(".main"));
+        <button class="modal__reset">Reset</button>`)}}new imageView(localStorage.getItem("counter")||0,"./images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_1400.jpg",document.querySelector(".main"),"ocean image",description,"Lorem Ipsum");

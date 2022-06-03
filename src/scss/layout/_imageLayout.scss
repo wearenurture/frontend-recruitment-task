@@ -1,15 +1,31 @@
 @import "./utils/variables";
+
 .main {
   position: relative;
   width: 1440px;
   height: 960px;
   background: #ffffff;
+  @media only screen and (max-width: $bp-huge) {
+    display: grid;
+    width: auto;
+    height: auto;
+    grid-template-rows: 1fr 1fr;
+    place-items: center;
+    background: blue;
+  }
   &__image {
     position: absolute;
     width: 505px;
     height: 330px;
     left: 230px;
     top: 96px;
+    @media only screen and (max-width: $bp-huge) {
+      position: relative;
+      width: 33rem;
+      height: 23rem;
+      left: 0;
+      top: 0;
+    }
   }
 
   &__description {
@@ -24,6 +40,11 @@
       font-size: 42px;
       line-height: 120%;
       color: #121212;
+      @media only screen and (max-width: $bp-huge) {
+        position: relative;
+        left: 0;
+        top: 0;
+      }
     }
 
     &--paragraph {
@@ -38,6 +59,20 @@
       font-size: 16px;
       line-height: 150%;
       color: #121212;
+      @media only screen and (max-width: $bp-huge) {
+        position: relative;
+        width: 380px;
+        position: relative;
+        left: 0;
+        top: 0;
+
+        font-family: $roboto-font;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 150%;
+        color: #121212;
+      }
     }
   }
 }
