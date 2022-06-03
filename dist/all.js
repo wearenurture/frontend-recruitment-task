@@ -8,8 +8,9 @@ const description=" Infinitely scalable, feature-rich and cloud-native data mana
           <p class="main__description--paragraph">
            ${this.description}
           </p>
+          <button class="main__button">Button</button>
         </div>
-        <button class="main__button">Button</button>
+        
       </div>
       <div class="overlay hidden"></div>
       <div class="modal hidden">

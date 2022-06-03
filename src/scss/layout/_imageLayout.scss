@@ -11,7 +11,8 @@
     height: auto;
     grid-template-rows: 1fr 1fr;
     place-items: center;
-    background: blue;
+
+    text-align: center;
   }
   &__image {
     position: absolute;
@@ -44,6 +45,8 @@
         position: relative;
         left: 0;
         top: 0;
+        height: 5rem;
+        width: 38rem;
       }
     }
 
@@ -61,11 +64,10 @@
       color: #121212;
       @media only screen and (max-width: $bp-huge) {
         position: relative;
-        width: 380px;
-        position: relative;
+        width: 38rem;
+        height: 9.6rem;
         left: 0;
         top: 0;
-
         font-family: $roboto-font;
         font-style: normal;
         font-weight: 300;
