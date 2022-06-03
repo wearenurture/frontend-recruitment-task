@@ -56,7 +56,6 @@
     position: absolute;
     right: 5%;
     top: calc(50% - 24px / 2 + 37px);
-
     background-color: $button-color;
     @include buttonStyle;
   }
