@@ -1,23 +1,15 @@
 @import "../utils/variables";
+@import "../utils/mixins";
 
 .main__button {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  padding: 16px 40px;
   gap: 10px;
   position: absolute;
   width: 128px;
   height: 48px;
   left: 830px;
   top: 338px;
-  background: $button-color;
-  border-radius: 32px;
-  border: none;
-  color: white;
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 100%;
+  @include buttonStyle;
 }

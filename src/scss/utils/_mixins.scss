@@ -1,0 +1,12 @@
+@mixin buttonStyle {
+  padding: 16px 40px;
+  background: $button-color;
+  border-radius: 32px;
+  border: none;
+  color: white;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 100%;
+}

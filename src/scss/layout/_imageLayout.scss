@@ -1,9 +1,9 @@
 @import "./utils/variables";
 .main {
+  position: relative;
   width: 1440px;
   height: 960px;
-  position: relative;
-  color: blue;
+  background: #ffffff;
   &__image {
     position: absolute;
     width: 505px;
