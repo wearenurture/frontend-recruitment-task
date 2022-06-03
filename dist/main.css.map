@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"main.css","sourcesContent":[]}
+{"version":3,"sources":["main.scss","main.css"],"names":[],"mappings":"AAAA,OACI,sBCCJ","file":"main.css","sourcesContent":[".start{\n    background-color: wheat;\n}",".start {\n  background-color: wheat;\n}"]}
