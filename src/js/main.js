@@ -12,13 +12,14 @@ const addCounterOnClick = () => {
 
 class imageView {
   showModalButton = document.querySelector(".main__button");
+  modal = document.querySelector(".modal");
   constructor() {
     this.showModal();
   }
 
   showModal() {
     this.showModalButton.addEventListener("click", () => {
-      console.log("Hey");
+      this.modal.classList.toggle("hidden");
     });
   }
 }
