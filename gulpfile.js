@@ -16,6 +16,11 @@ const files = {
     jsPath: 'src/js/**/*.js'
 };
 
+function imgTask (){
+	return src('images/*')
+		.pipe(dest('dist/images'))
+};
+
 function scssTask(){    
     return src(files.scssPath)
         .pipe(sourcemaps.init()) // initialize sourcemaps first
@@ -50,7 +55,7 @@ function watchTask(){
 
 
 exports.default = series(
-    parallel(scssTask, jsTask), 
+    parallel(scssTask, jsTask,imgTask), 
     cacheBustTask,
     watchTask
 );

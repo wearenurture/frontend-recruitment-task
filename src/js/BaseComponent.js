@@ -16,6 +16,6 @@ export class BaseComponent {
     this.element.innerHTMl = `${content}`;
   }
   destroy() {
-    this.element.innerHTML = "";
+    this.element.remove();
   }
 }

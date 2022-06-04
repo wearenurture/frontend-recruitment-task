@@ -1,3 +1,69 @@
-.start{
-    background-color: wheat;
+$base-color: #e4c1ae;
+@mixin Roboto-16 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 150%;
+}
+@mixin Roboto-42 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 120%;
+}
+
+.start {
+  background-color: wheat;
+  &_content {
+    &-title {
+      @include Roboto-42;
+    }
+    &-text {
+      @include Roboto-16;
+    }
+    &-button {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      padding: 16px 40px;
+      gap: 10px;
+      /* Primary #1 */
+      @include Roboto-16;
+      color: white;
+      background: #e4c1ae;
+      border-radius: 32px;
+    }
+  }
+}
+.cover {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 20;
+}
+.hidden {
+  display: none;
+}
+.popup {
+  opacity: 1;
+  transition: opacity 1s;
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  position: fixed;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  left: 40%;
+  top: 20%;
+  z-index: 200;
+  box-sizing: border-box;
+  padding: 3%;
+  &_close{
+    background-color: black;
+  }
 }
