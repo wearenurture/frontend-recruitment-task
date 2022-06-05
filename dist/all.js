@@ -4,23 +4,22 @@ const description=" Infinitely scalable, feature-rich and cloud-native data mana
           class="main__image"
           alt=${this.alt}
           src=${this.imageUrl}
-        /> <div class="main__description">
+        />
+        <div class="main__description">
           <h1 class="main__description--header">${this.title}</h1>
-          <p class="main__description--paragraph">
-           ${this.description}
-          </p>
+          <p class="main__description--paragraph">${this.description}</p>
           <button class="main__button">Button</button>
         </div>
-        
-      </div>
-      <div class="overlay hidden"></div>
-      <div class="modal hidden">
-      <div class="modal__close">
+
+        <div class="overlay hidden"></div>
+        <div class="modal hidden">
+          <div class="modal__close">
             <div class="modal__close--1"></div>
             <div class="modal__close--2"></div>
+          </div>
+          <h2 class="modal__content__alert">Alert!</h2>
+          <p class="modal__content__info"></p>
+
+          <button class="modal__reset">Reset</button>
         </div>
-      <div class="modal__content">
-        <h2 class="modal__content__alert">Alert!</h2>
-        <p class="modal__content__info"></p>
-      </div>
-        <button class="modal__reset">Reset</button>`)}}new imageView(localStorage.getItem("counter")||0,"./images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_1400.jpg",document.querySelector(".main"),"ocean image",description,"Lorem Ipsum");
+      </div>`)}}new imageView(localStorage.getItem("counter")||0,"./images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_1400.jpg",document.querySelector(".main"),"ocean image",description,"Lorem Ipsum");
