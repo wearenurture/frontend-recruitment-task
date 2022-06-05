@@ -7,11 +7,10 @@
   background: #ffffff;
   @media only screen and (max-width: $bp-huge) {
     display: grid;
-    width: auto;
+    width: 100%;
     height: auto;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr min-content;
     place-items: center;
-
     text-align: center;
   }
   &__image {
@@ -48,6 +47,8 @@
         top: 0;
         height: 5rem;
         width: 38rem;
+        font-size: 4.2rem;
+        line-height: 100%;
       }
     }
 

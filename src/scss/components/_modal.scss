@@ -29,66 +29,105 @@
     display: grid;
     grid-template-rows: min-content min-content min-content;
     place-items: center;
-    width: 90vw;
-    height: 50vh;
+    width: 60vw;
+    height: auto;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
   }
 
-  &__alert {
-    position: absolute;
-    width: 380px;
-    height: 50px;
-    left: calc(50% - 380px / 2 - 175px);
-    top: calc(50% - 50px / 2 - 24px);
-    font-family: "Roboto";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 42px;
-    line-height: 120%;
-    color: #121212;
+  @media only screen and (max-width: $bp-medium) {
+    min-height: 30vh;
+    width: 90vw;
+  }
 
-    @media only screen and (max-width: $bp-huge) {
-      position: relative;
-      left: 0;
-      top: 0;
-      width: auto;
+  &__content {
+    &__alert {
+      position: absolute;
+      width: 380px;
+      height: 50px;
+      left: calc(50% - 380px / 2 - 175px);
+      top: calc(50% - 50px / 2 - 24px);
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 42px;
+      line-height: 120%;
+      color: #121212;
+
+      @media only screen and (max-width: $bp-huge) {
+        position: relative;
+        left: 0;
+        top: 0;
+        width: auto;
+      }
+    }
+    &__info {
+      position: absolute;
+      width: 380px;
+      height: 24px;
+      left: calc(50% - 380px / 2 - 175px);
+      top: calc(50% - 24px / 2 + 37px);
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 150%;
+      color: #121212;
+      @media only screen and (max-width: $bp-huge) {
+        width: auto;
+        height: 2.4rem;
+        position: relative;
+        line-height: 100%;
+
+        left: 0;
+        top: 0;
+      }
     }
   }
 
-  &__box {
-    position: relative;
-  }
-  &__info {
-    position: absolute;
-    width: 380px;
-    height: 24px;
-    left: calc(50% - 380px / 2 - 175px);
-    top: calc(50% - 24px / 2 + 37px);
-    font-family: "Roboto";
-    font-style: normal;
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 150%;
-    color: #121212;
-    @media only screen and (max-width: $bp-huge) {
-      width: 70vw;
-      position: relative;
-      left: 0;
-      top: 0;
-    }
-  }
   &__reset {
     position: absolute;
-    right: 5%;
+    right: 46px;
     top: calc(50% - 24px / 2 + 37px);
     background-color: $button-color;
     @include buttonStyle;
     @media only screen and (max-width: $bp-huge) {
       position: relative;
-      left: 0;
+      right: 0;
       top: 0;
+      margin-top: 1rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    right: 46px;
+    top: 46px;
+    &--1 {
+      position: absolute;
+      left: 25%;
+      right: 25%;
+      top: 25%;
+      bottom: 25%;
+      transform: rotate(-45deg);
+      width: 100%;
+      height: 2px;
+      background-color: black;
+    }
+    &--2 {
+      position: absolute;
+      left: 25%;
+      right: 25%;
+      top: 25%;
+      bottom: 25%;
+      transform: rotate(45deg);
+      width: 100%;
+      height: 2px;
+      background-color: black;
     }
   }
 }

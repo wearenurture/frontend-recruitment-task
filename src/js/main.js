@@ -6,6 +6,7 @@ const description =
 class imageView {
   container;
   showModalButton;
+  closeModalButton;
   modal;
   overlay;
   counter;
@@ -26,12 +27,13 @@ class imageView {
     this.showModalButton = document.querySelector(".main__button");
     this.modal = document.querySelector(".modal");
     this.overlay = document.querySelector(".overlay");
-    this.modalInfo = document.querySelector(".modal__info");
+    this.modalInfo = document.querySelector(".modal__content__info");
     this.resetButton = document.querySelector(".modal__reset");
-
+    this.closeModalButton = document.querySelector(".modal__close");
     this.counter = counter;
     this.showModal();
     this.onOverlayClick();
+    this.onCloseButton();
     this.cacheCounter();
     this.reset();
   }
@@ -48,6 +50,12 @@ class imageView {
 
   onOverlayClick() {
     this.overlay.addEventListener("click", () => {
+      this.toggleModal();
+    });
+  }
+
+  onCloseButton() {
+    this.closeModalButton.addEventListener("click", () => {
       this.toggleModal();
     });
   }
@@ -83,6 +91,7 @@ class imageView {
     this.container.insertAdjacentHTML(
       "afterbegin",
       `
+      
        <img
           class="main__image"
           alt=${this.alt}
@@ -98,14 +107,14 @@ class imageView {
       </div>
       <div class="overlay hidden"></div>
       <div class="modal hidden">
-        <h2 class="modal__alert">Alert!</h2>
-        <div class="modal__box">
-          <div class="modal__vector">
-            <div class="modal__vector--1"></div>
-            <div class="modal__vector--2"></div>
-          </div>
+      <div class="modal__close">
+            <div class="modal__close--1"></div>
+            <div class="modal__close--2"></div>
         </div>
-        <p class="modal__info"></p>
+      <div class="modal__content">
+        <h2 class="modal__content__alert">Alert!</h2>
+        <p class="modal__content__info"></p>
+      </div>
         <button class="modal__reset">Reset</button>`
     );
   }
