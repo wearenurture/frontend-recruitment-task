@@ -113,8 +113,7 @@ class imageView {
           <p class="modal__content__info"></p>
 
           <button class="modal__reset">Reset</button>
-        </div>
-      </div>`
+        </div>`
     );
   }
 }
