@@ -1,7 +1,7 @@
-const { src, dest, watch, series, parallel } = require('gulp');
+const { src, dest, watch, series, parallel, task } = require('gulp');
 
 const sourcemaps = require('gulp-sourcemaps');
-const sass = require('gulp-sass');
+const sass = require('gulp-sass')(require('sass'));
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
 const postcss = require('gulp-postcss');
@@ -9,10 +9,16 @@ const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 var replace = require('gulp-replace');
 
+
 // File paths
 const files = { 
     scssPath: 'src/scss/**/*.scss',
     jsPath: 'src/js/**/*.js'
+};
+
+function imgTask (){
+	return src('images/*')
+		.pipe(dest('dist/images'))
 };
 
 function scssTask(){    
@@ -47,8 +53,9 @@ function watchTask(){
         parallel(scssTask, jsTask));    
 }
 
+
 exports.default = series(
-    parallel(scssTask, jsTask), 
+    parallel(scssTask, jsTask,imgTask), 
     cacheBustTask,
     watchTask
 );

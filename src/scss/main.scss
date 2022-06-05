@@ -1,0 +1,148 @@
+$base-color: #e4c1ae;
+:root{
+  font-size: 8px;
+}
+
+@mixin Roboto-16 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 2rem;
+  line-height: 150%;
+}
+@mixin Roboto-42 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 120%;
+}
+@mixin button {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 16px 40px;
+  gap: 10px;
+  /* Primary #1 */
+  @include Roboto-16;
+  color: white;
+  background: #e4c1ae;
+  border-radius: 32px;
+  cursor: pointer;
+}
+.app {
+  display: flex;
+  justify-content: center;
+}
+.start {
+  max-width: 1440px;
+  min-width: 650px;
+  display: flex;
+  gap: 12rem;
+  align-items: center;
+  justify-self: center;
+  &_left {
+    //width: 505px;
+    height: 330px;
+  }
+  &_content {
+    &-title {
+      @include Roboto-42;
+    }
+    &-text {
+      @include Roboto-16;
+    }
+    &-button {
+      @include button;
+    }
+  }
+}
+.cover {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 20;
+}
+
+.hidden {
+  display: none;
+}
+
+.popup {
+  opacity: 1;
+  transition: opacity 1s;
+  display: flex;
+  align-items: flex-start;
+  position: fixed;
+  justify-content: center;
+  background-color: white;
+  flex-direction: column;
+  left: 10%;
+  top: 40%;
+  z-index: 200;
+  box-sizing: border-box;
+  padding: 3%;
+  width: 910px;
+  max-height: 210px;
+  &_content {
+    &-title{
+      @include Roboto-42;
+    }
+    @include Roboto-16;
+    &-close {
+      position: absolute;
+      top:1%;
+      left: 90%;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+    }
+    &-close:hover{
+      transform: scale(1.2);
+    }
+    &-reset {
+      margin: 1rem;
+      @include button;
+      padding: 1rem 2rem;
+
+    }
+  }
+}
+
+
+.disabled {
+  transition: 1s all;
+  opacity: 0.3;
+}
+
+@media (max-width: 1440px) {
+  .popup{
+    width: 910px;
+  }
+}
+@media (max-width: 1050px) {
+  .popup{
+    width: 500px;
+  }
+  .start_left{
+    img{
+      width: 1002px;
+    }
+  }
+}
+
+@media (max-width: 880px) {
+  .start{
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 770px) {
+  .popup{
+   width: 350px;
+  }
+}
