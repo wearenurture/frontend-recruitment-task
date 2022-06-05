@@ -1,9 +1,13 @@
 $base-color: #e4c1ae;
+:root{
+  font-size: 8px;
+}
+
 @mixin Roboto-16 {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 300;
-  font-size: 16px;
+  font-size: 2rem;
   line-height: 150%;
 }
 @mixin Roboto-42 {
@@ -24,10 +28,23 @@ $base-color: #e4c1ae;
   color: white;
   background: #e4c1ae;
   border-radius: 32px;
+  cursor: pointer;
 }
-
+.app {
+  display: flex;
+  justify-content: center;
+}
 .start {
-  background-color: wheat;
+  max-width: 1440px;
+  min-width: 650px;
+  display: flex;
+  gap: 12rem;
+  align-items: center;
+  justify-self: center;
+  &_left {
+    //width: 505px;
+    height: 330px;
+  }
   &_content {
     &-title {
       @include Roboto-42;
@@ -57,27 +74,75 @@ $base-color: #e4c1ae;
   opacity: 1;
   transition: opacity 1s;
   display: flex;
-  align-items: center;
-  background-color: #ffffff;
+  align-items: flex-start;
   position: fixed;
   justify-content: center;
-  display: flex;
+  background-color: white;
   flex-direction: column;
-  left: 40%;
-  top: 20%;
+  left: 10%;
+  top: 40%;
   z-index: 200;
   box-sizing: border-box;
   padding: 3%;
-  &_content{
-    &-close{
-      background-color: black;
+  width: 910px;
+  max-height: 210px;
+  &_content {
+    &-title{
+      @include Roboto-42;
     }
-    &-reset{
+    @include Roboto-16;
+    &-close {
+      position: absolute;
+      top:1%;
+      left: 90%;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+    }
+    &-close:hover{
+      transform: scale(1.2);
+    }
+    &-reset {
+      margin: 1rem;
       @include button;
+      padding: 1rem 2rem;
+
     }
   }
 }
 
-.disabled{
-  background-color: gray;
+
+.disabled {
+  transition: 1s all;
+  opacity: 0.3;
+}
+
+@media (max-width: 1440px) {
+  .popup{
+    width: 910px;
+  }
+}
+@media (max-width: 1050px) {
+  .popup{
+    width: 500px;
+  }
+  .start_left{
+    img{
+      width: 1002px;
+    }
+  }
+}
+
+@media (max-width: 880px) {
+  .start{
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 770px) {
+  .popup{
+   width: 350px;
+  }
 }

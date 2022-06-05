@@ -1,5 +1,4 @@
 import { BaseComponent } from "./BaseComponent.js";
-//import * as CloseIcon from './images/close.png';
 
 export class ModalWindow extends BaseComponent {
   constructor(parentElement, clickCount, onSetValueCounter) {
@@ -35,12 +34,10 @@ export class ModalWindow extends BaseComponent {
       this.parentElement,
       "div",
       ["popup", "hidden"],
-      "",
-      '<h2 class="popup_title">Alert<h2>'
     );
+    this.buttonClose = new BaseComponent(this.popup.element, "span", ["popup_content-title"],'','Alert!');
     this.popupContent = new BaseComponent(this.popup.element, "div", ["popup_content"], "", this.strContent);
-    this.buttonClose = new BaseComponent(this.popup.element, "button", ["popup_content-close"], "", `<img >`);
-
+    this.buttonClose = new BaseComponent(this.popup.element, "button", ["popup_content-close"], "", `<img src="dist/images/close.png">`);
     this.btnReset = new BaseComponent(this.popup.element, "button", ["popup_content-reset", "disabled"], "", "Reset");
     this.btnReset.element.setAttribute("disabled", false);
   }
