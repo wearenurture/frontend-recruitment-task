@@ -28,16 +28,19 @@ export class ModalWindow extends BaseComponent {
       this.btnReset.element.removeAttribute("disabled");
     }
   }
+
   init() {
     this.strContent = `You have clicked ${this.clickCount} times to related button.`;
-    this.popup = new BaseComponent(
-      this.parentElement,
-      "div",
-      ["popup", "hidden"],
-    );
-    this.buttonClose = new BaseComponent(this.popup.element, "span", ["popup_content-title"],'','Alert!');
+    this.popup = new BaseComponent(this.parentElement, "div", ["popup", "hidden"]);
+    this.buttonClose = new BaseComponent(this.popup.element, "span", ["popup_content-title"], "", "Alert!");
     this.popupContent = new BaseComponent(this.popup.element, "div", ["popup_content"], "", this.strContent);
-    this.buttonClose = new BaseComponent(this.popup.element, "button", ["popup_content-close"], "", `<img src="dist/images/close.png">`);
+    this.buttonClose = new BaseComponent(
+      this.popup.element,
+      "button",
+      ["popup_content-close"],
+      "",
+      `<img src="dist/images/close.png">`
+    );
     this.btnReset = new BaseComponent(this.popup.element, "button", ["popup_content-reset", "disabled"], "", "Reset");
     this.btnReset.element.setAttribute("disabled", false);
   }
