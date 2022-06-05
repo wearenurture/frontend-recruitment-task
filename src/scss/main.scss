@@ -13,6 +13,18 @@ $base-color: #e4c1ae;
   font-size: 42px;
   line-height: 120%;
 }
+@mixin button {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 16px 40px;
+  gap: 10px;
+  /* Primary #1 */
+  @include Roboto-16;
+  color: white;
+  background: #e4c1ae;
+  border-radius: 32px;
+}
 
 .start {
   background-color: wheat;
@@ -24,16 +36,7 @@ $base-color: #e4c1ae;
       @include Roboto-16;
     }
     &-button {
-      display: flex;
-      flex-direction: row;
-      align-items: flex-start;
-      padding: 16px 40px;
-      gap: 10px;
-      /* Primary #1 */
-      @include Roboto-16;
-      color: white;
-      background: #e4c1ae;
-      border-radius: 32px;
+      @include button;
     }
   }
 }
@@ -45,9 +48,11 @@ $base-color: #e4c1ae;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 20;
 }
+
 .hidden {
   display: none;
 }
+
 .popup {
   opacity: 1;
   transition: opacity 1s;
@@ -63,7 +68,16 @@ $base-color: #e4c1ae;
   z-index: 200;
   box-sizing: border-box;
   padding: 3%;
-  &_close{
-    background-color: black;
+  &_content{
+    &-close{
+      background-color: black;
+    }
+    &-reset{
+      @include button;
+    }
   }
+}
+
+.disabled{
+  background-color: gray;
 }

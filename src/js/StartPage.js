@@ -20,14 +20,15 @@ class StartPage {
       "button"
     );
     this.contentButton.element.addEventListener("click", () => {
-
-      new ModalWindow(this.parentElement,this.getCurrentCount());
+      this.count = Number(localStorage.getItem("counter"))+1;
+      this.onSetValueCounter(this.count);
+      new ModalWindow(this.parentElement, this.count, this.onSetValueCounter);
     });
   }
-  getCurrentCount(){
-      this.count = Number(localStorage.getItem('counter'));
-      console.log(this.count)
-      return 
+  onSetValueCounter(value) {
+      console.log(value)
+    value === 5 ? (value = 0) : value;
+    localStorage.setItem("counter", String(value));
   }
 }
 export default StartPage;
