@@ -16,6 +16,7 @@
     "url": "https://github.com/marcinfabisiak97/frontend-recruitment-task/issues"
   },
   "homepage": "https://github.com/marcinfabisiak97/frontend-recruitment-task#readme",
+ 
   "dependencies": {
     "autoprefixer": "^10.4.7",
     "cssnano": "^5.1.11",

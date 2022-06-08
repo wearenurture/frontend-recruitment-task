@@ -4,10 +4,14 @@
   justify-content: space-around;
   align-items: center;
   margin: 96px auto;
+  &__images {
+    margin-right: 0;
+  }
   &__text {
-    padding: 5%;
+    padding-left: 0;
     max-width: 30%;
     text-align: left;
+    margin-left: 0;
     h1 {
       font-size: 3rem;
     }
@@ -24,7 +28,7 @@
       &:hover {
         outline: 0px solid transparent;
         padding: 1% 2%;
-        border: 5px solid #8c9194;
+        background-color: #8c9194;
         -webkit-transition: all 0.2s ease-in-out;
         transition: all 0.2s ease-in-out;
       }

@@ -12,29 +12,15 @@
   </head>
   <body>
     <section class="container">
-      <aside>
-        <picture>
-          <source
-            media="(min-width:1000px)"
-            srcset="
-              images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_1002.jpg
-            "
-          />
-          <source
-            media="(min-width:465px)"
-            srcset="
-              images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_480.jpg
-            "
-          />
-          <img
-            src="images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_480.jpg"
-            alt="photo"
-          />
-        </picture>
+      <aside class="container__images">
+        <img
+          src="images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_480.jpg"
+          alt="photo"
+        />
       </aside>
       <article class="container__text">
-        <h1>Lorem Ipsum</h1>
-        <p>
+        <h1 class="title">Lorem Ipsum</h1>
+        <p class="desc">
           Infinitely scalable, feature-rich and cloud-native data management and
           protection for modern and legacy infrastructures and SaaS platforms,
           managed via a single app with no hardware required.
@@ -43,11 +29,11 @@
       </article>
     </section>
     <section class="modal" id="modal">
-      <p class="modal__header">
+      <div class="modal__header">
         <h2 class="title">Alert</h2>
         <button class="close__button reset">reset</button>
         <button data-close-button class="close__button">&times;</button>
-      </p>
+      </div>
       <p class="modal__body">
         You have clicked <span class="display"></span> times to related button
       </p>
@@ -56,5 +42,3 @@
     <script src="dist/all.js"></script>
   </body>
 </html>
-
-
