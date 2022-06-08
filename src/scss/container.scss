@@ -1,0 +1,33 @@
+.container {
+  width: 1440px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 96px auto;
+  &__text {
+    padding: 5%;
+    max-width: 30%;
+    text-align: left;
+    h1 {
+      font-size: 3rem;
+    }
+    button {
+      border-radius: 50px;
+      background-color: bisque;
+      max-width: 25%;
+      padding: 1% 2%;
+      color: white;
+      outline: 0px solid;
+      border: 5px solid transparent;
+      -webkit-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out;
+      &:hover {
+        outline: 0px solid transparent;
+        padding: 1% 2%;
+        border: 5px solid #8c9194;
+        -webkit-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+      }
+    }
+  }
+}
