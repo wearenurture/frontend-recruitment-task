@@ -2,7 +2,7 @@ const modal = (children) => {
   const dialog = document.createElement("dialog");
 };
 
-const sectionModule = (root, content) => {
+const createSectionModule = (root, content) => {
   const component = document.createElement("section");
   const contentContainer = document.createElement("div");
   const button = document.createElement("button");
@@ -35,7 +35,7 @@ const sectionModule = (root, content) => {
   root.appendChild(component);
 };
 
-sectionModule(document.body, {
+createSectionModule(document.body, {
   buttonContent: "Button",
   header: "Lorem Ipsum",
   paragraph:
