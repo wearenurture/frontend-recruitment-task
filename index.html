@@ -1,11 +1,60 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>[Name] [Surname] - Recruitment task</title>
-</head>
-<body>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>[Marcin] [Fabisiak] - Recruitment task</title>
+    <link rel="stylesheet" href="dist/main.css" />
+  </head>
+  <body>
+    <section class="container">
+      <aside>
+        <picture>
+          <source
+            media="(min-width:1000px)"
+            srcset="
+              images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_1002.jpg
+            "
+          />
+          <source
+            media="(min-width:465px)"
+            srcset="
+              images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_480.jpg
+            "
+          />
+          <img
+            src="images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_480.jpg"
+            alt="photo"
+          />
+        </picture>
+      </aside>
+      <article class="container__text">
+        <h1>Lorem Ipsum</h1>
+        <p>
+          Infinitely scalable, feature-rich and cloud-native data management and
+          protection for modern and legacy infrastructures and SaaS platforms,
+          managed via a single app with no hardware required.
+        </p>
+        <button data-modal-target="#modal" class="clicker">button</button>
+      </article>
+    </section>
+    <section class="modal" id="modal">
+      <p class="modal__header">
+        <h2 class="title">Alert</h2>
+        <button class="close__button reset">reset</button>
+        <button data-close-button class="close__button">&times;</button>
+      </p>
+      <p class="modal__body">
+        You have clicked <span class="display"></span> times to related button
+      </p>
+    </section>
+    <section id="overlay"></section>
+    <script src="dist/all.js"></script>
+  </body>
+</html>
 
-</body>
+
