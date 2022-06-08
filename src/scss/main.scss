@@ -1,0 +1,44 @@
+body{
+    margin: 0;
+    border: 0;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+
+    .container{
+        width: 1440px;
+        height: 100vh;
+
+        .img-cont{
+            float: left;
+            width: 505px;
+            height: 330px;
+            margin: 5% 0 0 15%;
+        }
+
+        .content{
+            float: left;
+            width: 380px;
+            height: 330px;
+            margin: 5% auto 0 15%;
+            font-size: 16px;
+            line-height: 150%;
+
+            h2{
+                font-size: 42px;
+                line-height: 120%;
+            }
+
+            .btn-cont{
+                width: 128px;
+                height: 48px;
+                color: #fff;
+                background-color: #E4C1AE;
+                border-radius: 28px;
+                text-align: center;
+                line-height: 48px;
+                margin-top: 32px;
+                font-weight: bold;
+                cursor: pointer;
+            }
+        }
+    }      
+}
