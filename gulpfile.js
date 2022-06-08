@@ -11,16 +11,17 @@ var replace = require('gulp-replace');
 
 // File paths
 const files = { 
-    scssPath: 'src/scss/**/*.scss',
-    jsPath: 'src/js/**/*.js'
+    scssPath: 'src/scss/*.scss',
+    jsPath: 'src/js/*.js',
+    htmlPath: 'index.html'
 };
 
 function scssTask(){    
     return src(files.scssPath)
-        .pipe(sourcemaps.init()) // initialize sourcemaps first
-        .pipe(sass([])) // compile SCSS to CSS
-        .pipe(postcss([ autoprefixer(), cssnano() ])) // PostCSS plugins
-        .pipe(sourcemaps.write('.')) // write sourcemaps file in current directory
+        //.pipe(sourcemaps.init()) // initialize sourcemaps first
+        .pipe(sass()) // compile SCSS to CSS
+        //.pipe(postcss([ autoprefixer(), cssnano() ])) // PostCSS plugins
+        //.pipe(sourcemaps.write('.')) // write sourcemaps file in current directory
         .pipe(dest('dist')
     ); // put final CSS in dist folder
 }
@@ -42,13 +43,29 @@ function cacheBustTask(){
         .pipe(dest('.'));
 }
 
+function coppyHtml(){
+    return (
+        src('index.html')
+        .pipe(dest('./dist'))
+    );
+}
+
+function coppyImg(){
+    return (
+        src('./images/*.jpg')
+        .pipe(dest('./dist/images'))
+    );
+}
+
 function watchTask(){
-    watch([files.scssPath, files.jsPath], 
-        parallel(scssTask, jsTask));    
+    watch([files.scssPath, files.jsPath, files.htmlPath], 
+        parallel(coppyHtml, scssTask, jsTask));    
 }
 
 exports.default = series(
-    parallel(scssTask, jsTask), 
+    coppyHtml,
+    coppyImg,
+    parallel(scssTask, jsTask),
     cacheBustTask,
     watchTask
 );
