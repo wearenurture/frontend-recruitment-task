@@ -15,5 +15,18 @@
   "bugs": {
     "url": "https://github.com/marcinfabisiak97/frontend-recruitment-task/issues"
   },
-  "homepage": "https://github.com/marcinfabisiak97/frontend-recruitment-task#readme"
+  "homepage": "https://github.com/marcinfabisiak97/frontend-recruitment-task#readme",
+  "dependencies": {
+    "autoprefixer": "^10.4.7",
+    "cssnano": "^5.1.11",
+    "gulp": "^4.0.2",
+    "gulp-cli": "^2.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-postcss": "^9.0.1",
+    "gulp-replace": "^1.1.3",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
+    "sass": "^1.52.2"
+  }
 }
