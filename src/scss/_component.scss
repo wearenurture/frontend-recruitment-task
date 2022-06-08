@@ -2,10 +2,13 @@
   display: grid;
   grid-template-columns: repeat(2, minmax(200px, 1fr));
   width: 1440px;
+  height: 50vh;
+  overflow: hidden;
 
   & > .component-image {
     width: 505px;
     height: 330px;
+    margin: 96px 95px 0 230px;
   }
 
   & > .component-content {
@@ -14,13 +17,12 @@
     justify-content: center;
     align-items: start;
     text-align: left;
-    background-color: red;
+    margin: 136px 0 230px 95px;
 
     .component-header {
       font-size: 42px;
       font-weight: bold;
       line-height: 50.4px;
-      background-color: blue;
     }
 
     .component-paragraph {
@@ -29,21 +31,22 @@
       font-weight: 300;
       font-size: 16px;
       line-height: 24px;
-      left: calc(50% - 380px / 2 + 300px);
-      top: calc(50% - 96px / 2 - 222px);
+      margin-top: 24px;
     }
 
     .component-button {
       width: 128px;
       height: 48px;
+      line-height: 100%;
+      margin-top: 32px;
       font-size: 16px;
       border: none;
       border-radius: 32px;
-      padding: 16px, 40px;
+      padding: 16px 40px;
       font-weight: 700;
-      gap: 10px;
-      color: #ffffff;
       background-color: #e4c1ae;
+      color: #ffffff;
+      cursor: pointer;
     }
   }
 }
