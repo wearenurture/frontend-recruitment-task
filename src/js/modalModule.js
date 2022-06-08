@@ -6,9 +6,25 @@ const modal = ({ headerContent, paragraphContent }) => {
   const header = document.createElement("h2");
   const paragraph = document.createElement("p");
 
+  const userCounter = sessionStorage.getItem("userCounter");
+
+  if (Number(userCounter) > 5) {
+    const resetCounter = document.createElement("button");
+    resetCounter.textContent = "Resetuj licznik";
+
+    resetCounter.setAttribute("class", "reset-user-counter-btn");
+
+    resetCounter.addEventListener("click", (e) => {
+      sessionStorage.setItem("userCounter", 0);
+      location.reload(true);
+    });
+
+    dialog.appendChild(resetCounter);
+  }
+
   button.textContent = "X";
   header.textContent = headerContent;
-  paragraph.textContent = paragraphContent;
+  paragraph.innerHTML = paragraphContent;
 
   modal.appendChild(dialog);
 
@@ -22,11 +38,11 @@ const modal = ({ headerContent, paragraphContent }) => {
   dialog.appendChild(paragraph);
   dialog.appendChild(button);
 
-  modal.addEventListener("click", function (e) {
+  modal.addEventListener("click", (e) => {
     const { variant } = e.target.dataset;
 
     if (variant == "close-modal") {
-      this.remove();
+      modal.remove();
     }
   });
 

@@ -6,6 +6,14 @@ const createSectionModule = (root, content) => {
   const header = document.createElement("h3");
   const paragraph = document.createElement("paragraph");
 
+  let counter;
+
+  if (sessionStorage.getItem("userCounter")) {
+    counter = sessionStorage.getItem("userCounter");
+  } else {
+    counter = 0;
+  }
+
   component.setAttribute("class", "component");
   contentContainer.setAttribute("class", "component-content");
 
@@ -21,19 +29,23 @@ const createSectionModule = (root, content) => {
   header.textContent = content.header;
   paragraph.textContent = content.paragraph;
 
-  button.addEventListener("click", () =>
-    modal({
-      headerContent: "Alert!",
-      paragraphContent: "You have clicked X times to related button.",
-    })
-  );
-
   contentContainer.appendChild(header);
   contentContainer.appendChild(paragraph);
   contentContainer.appendChild(button);
 
   component.appendChild(image);
   component.appendChild(contentContainer);
+
+  button.addEventListener("click", () => {
+    sessionStorage.setItem("userCounter", ++counter);
+
+    modal({
+      headerContent: "Alert!",
+      paragraphContent: `You have clicked <strong>${sessionStorage.getItem(
+        "userCounter"
+      )} times </strong>  to related button.`,
+    });
+  });
 
   root.appendChild(component);
 };

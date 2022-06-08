@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: repeat(2, minmax(200px, 1fr));
   width: 1440px;
-  height: 50vh;
+  height: auto;
   overflow: hidden;
 
   & > .component-image {
