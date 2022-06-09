@@ -7,11 +7,10 @@
 }
 
 body {
+  height: 100vh;
+  max-width: 100vw;
   font-family: "Roboto", arial, sans-serif;
   background-color: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include flex(column, center, center);
   overflow-x: hidden;
 }

@@ -8,6 +8,10 @@ const modal = ({ headerContent, paragraphContent }) => {
 
   const userCounter = sessionStorage.getItem("userCounter");
 
+  dialog.appendChild(header);
+  dialog.appendChild(paragraph);
+  dialog.appendChild(button);
+
   if (Number(userCounter) > 5) {
     const resetCounter = document.createElement("button");
     resetCounter.textContent = "Resetuj licznik";
@@ -23,7 +27,7 @@ const modal = ({ headerContent, paragraphContent }) => {
   }
 
   button.setAttribute("class", "close-modal-button");
-  
+
   button.textContent = "X";
   header.textContent = headerContent;
   paragraph.innerHTML = paragraphContent;
@@ -35,10 +39,6 @@ const modal = ({ headerContent, paragraphContent }) => {
   modal.setAttribute("data-variant", "close-modal");
 
   dialog.setAttribute("class", "modal");
-
-  dialog.appendChild(header);
-  dialog.appendChild(paragraph);
-  dialog.appendChild(button);
 
   modal.addEventListener("click", (e) => {
     const { variant } = e.target.dataset;

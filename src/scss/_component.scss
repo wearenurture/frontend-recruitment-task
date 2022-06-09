@@ -1,14 +1,15 @@
 .component {
   display: grid;
   grid-template-columns: repeat(2, minmax(200px, 1fr));
+  row-gap: 10px;
+  column-gap: 95px;
   width: 1440px;
   height: auto;
-  overflow: hidden;
+  padding: 50px 0;
 
   & > .component-image {
-    width: 505px;
-    height: 330px;
-    margin: 96px 95px 0 230px;
+    min-width: 400px;
+    margin: 96px 0 0 230px;
   }
 
   & > .component-content {
@@ -24,7 +25,7 @@
 
     .component-paragraph {
       width: 380px;
-      height: 96px;
+      height: auto;
       font-weight: 300;
       font-size: 16px;
       line-height: 24px;
@@ -34,6 +35,102 @@
 
     .component-button {
       @include deafultButton;
+    }
+  }
+
+  @media (max-width: 1040px) {
+    & {
+      width: 80vw;
+      min-width: 400px;
+      grid-template-columns: 1fr;
+
+      @include flex(column, center, center);
+
+      & > .component-image {
+        margin: 0;
+      }
+
+      & > .component-content {
+        width: 100%;
+        padding: 0 10px;
+        text-align: center;
+        margin: 0 auto;
+
+        @include flex(column, center, center);
+
+        & > .component-paragraph {
+          margin-top: 5px;
+          width: auto;
+          font-size: 21px;
+          line-height: 32px;
+
+          @media (max-width: 633px) {
+            & {
+              font-size: 16px;
+            }
+          }
+
+          @media (max-width: 480px) {
+            & {
+              font-size: 13px;
+            }
+          }
+        }
+
+        & > .component-header {
+          margin: 0 auto;
+        }
+
+        & > .component-button {
+          width: 100%;
+
+          @media (max-width: 395px) {
+            & {
+              margin-top: 10%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1040px) and (orientation: landscape) {
+    & {
+      width: 100vw;
+      min-width: 820px;
+      grid-template-columns: repeat(2, minmax(200px, 1fr));
+      column-gap: 10px;
+      overflow: hidden;
+
+      @include flex(row, start, space-around);
+
+      & > .component-image {
+        margin: 0;
+      }
+
+      & > .component-content {
+        & > .component-header {
+          height: 10%;
+          font-size: 36px;
+          margin: 0;
+        }
+
+        & > .component-paragraph {
+          text-align: center;
+          height: 80%;
+          width: 50vw;
+          font-size: 14px;
+          line-height: 24px;
+          margin-top: 24px;
+          color: #121212;
+        }
+
+        & > .component-button {
+          padding: 0;
+          line-height: 100%;
+          width: 80%;
+        }
+      }
     }
   }
 }

@@ -1,4 +1,4 @@
-const createSectionModule = (root, content) => {
+const createSectionModule = (root, content, srcset = [], sizes = []) => {
   const component = document.createElement("section");
   const contentContainer = document.createElement("div");
   const button = document.createElement("button");
@@ -7,6 +7,17 @@ const createSectionModule = (root, content) => {
   const paragraph = document.createElement("paragraph");
 
   let counter;
+  let srcsetString = "";
+  let sizesString = "";
+
+  for (let i = 0; i < srcset.length; i++) {
+    srcsetString += srcset[i];
+  }
+
+  for (let i = 0; i < sizes.length; i++) {
+    sizesString += sizes[i];
+  }
+  console.log(sizesString);
 
   if (sessionStorage.getItem("userCounter")) {
     counter = sessionStorage.getItem("userCounter");
@@ -20,6 +31,9 @@ const createSectionModule = (root, content) => {
   image.setAttribute("class", "component-image");
   image.setAttribute("src", content.image.src);
   image.setAttribute("alt", content.image.alt);
+
+  image.setAttribute("srcset", srcsetString);
+  image.setAttribute("sizes", sizesString);
 
   header.setAttribute("class", "component-header");
   paragraph.setAttribute("class", "component-paragraph");
