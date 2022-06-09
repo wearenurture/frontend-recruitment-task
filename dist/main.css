@@ -85,3 +85,57 @@ body {
           display: block; }
     body .popup-container.is-open {
       display: block; }
+
+@media screen and (max-width: 1007px) {
+  body .container {
+    height: auto;
+    width: 100%; }
+    body .container .img-cont {
+      object-fit: cover;
+      float: left;
+      width: 80%;
+      height: 330px;
+      margin: 20px 10%; }
+    body .container .content {
+      clear: both;
+      width: 80%;
+      height: 330px;
+      margin: 20px 10%;
+      font-size: 16px;
+      line-height: 150%; }
+  body .popup-container .popup {
+    width: 100%;
+    height: 310px; }
+    body .popup-container .popup .popup-content {
+      position: absolute;
+      width: 90%;
+      height: 100%;
+      margin: 0 10%;
+      pointer-events: none; }
+      body .popup-container .popup .popup-content h2 {
+        font-size: 42px;
+        line-height: 120%; }
+      body .popup-container .popup .popup-content span {
+        line-height: 150%; }
+        body .popup-container .popup .popup-content span .popup-content-semibold {
+          font-weight: 600; } }
+
+@media screen and (max-width: 768px) {
+  body .container {
+    height: auto;
+    width: 100%; }
+    body .container .img-cont {
+      object-fit: cover;
+      float: left;
+      width: 90%;
+      height: 330px;
+      margin: 20px 5%; }
+    body .container .content {
+      clear: both;
+      width: 90%;
+      height: 330px;
+      margin: 20px 5%;
+      font-size: 16px;
+      line-height: 150%; }
+  body .popup-container .popup {
+    width: 100%; } }
