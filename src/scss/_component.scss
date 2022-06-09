@@ -12,11 +12,8 @@
   }
 
   & > .component-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: start;
-    text-align: left;
+    @include flex(column, center, start);
+
     margin: 136px 0 230px 95px;
 
     .component-header {
@@ -36,18 +33,7 @@
     }
 
     .component-button {
-      width: 128px;
-      height: 48px;
-      line-height: 100%;
-      margin-top: 32px;
-      font-size: 16px;
-      border: none;
-      border-radius: 32px;
-      padding: 16px 40px;
-      font-weight: 700;
-      background-color: #e4c1ae;
-      color: #ffffff;
-      cursor: pointer;
+      @include deafultButton;
     }
   }
 }

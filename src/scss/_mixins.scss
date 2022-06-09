@@ -1,0 +1,21 @@
+@mixin deafultButton {
+  width: auto;
+  height: 48px;
+  line-height: 100%;
+  margin-top: 32px;
+  font-size: 16px;
+  border: none;
+  border-radius: 32px;
+  padding: 16px 40px;
+  font-weight: 700;
+  background-color: $buttonColor;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+@mixin flex($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}

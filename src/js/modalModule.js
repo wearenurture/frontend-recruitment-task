@@ -14,7 +14,7 @@ const modal = ({ headerContent, paragraphContent }) => {
 
     resetCounter.setAttribute("class", "reset-user-counter-btn");
 
-    resetCounter.addEventListener("click", (e) => {
+    resetCounter.addEventListener("click", () => {
       sessionStorage.setItem("userCounter", 0);
       location.reload(true);
     });
@@ -22,6 +22,8 @@ const modal = ({ headerContent, paragraphContent }) => {
     dialog.appendChild(resetCounter);
   }
 
+  button.setAttribute("class", "close-modal-button");
+  
   button.textContent = "X";
   header.textContent = headerContent;
   paragraph.innerHTML = paragraphContent;
