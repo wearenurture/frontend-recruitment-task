@@ -2,11 +2,8 @@
   display: grid;
   grid-template-columns: repeat(2, minmax(200px, 1fr));
   row-gap: 10px;
-  column-gap: 50px;
   width: 1440px;
-
-  height: auto;
-  padding: 50px 0;
+  margin: 20px 230px;
 
   & > .component-image {
     width: 505px;
@@ -16,8 +13,7 @@
 
   & > .component-content {
     @include flex(column, center, start);
-
-    margin: 136px 0 230px 95px;
+    margin: 76px 0 0 95px;
 
     .component-header {
       font-size: 42px;
@@ -27,7 +23,6 @@
 
     .component-paragraph {
       width: 380px;
-      height: auto;
       font-weight: 300;
       font-size: 16px;
       line-height: 24px;
@@ -40,12 +35,13 @@
     }
   }
 
-  @media (max-width: 1040px) {
+  @media (max-width: 1200px) {
     & {
       width: 80vw;
       min-width: 495px;
       grid-template-columns: 1fr;
-
+      // box-shadow: 1px 1px 10px black;
+      padding: 30px;
       @include flex(column, center, center);
 
       & > .component-image {
@@ -59,7 +55,7 @@
         text-align: center;
         margin: 0 auto;
 
-        @include flex(column, center, start);
+        @include flex(column, center, center);
 
         & > .component-paragraph {
           margin-top: 5px;
@@ -97,10 +93,9 @@
     }
   }
 
-  @media (max-width: 1040px) and (orientation: landscape) {
+  @media (max-width: 1200px) and (orientation: landscape) {
     & {
       width: 80vw;
-      min-width: 820px;
       grid-template-columns: repeat(2, minmax(200px, 1fr));
       column-gap: 10px;
       overflow: hidden;
@@ -133,6 +128,31 @@
           padding: 0;
           line-height: 100%;
           width: 80%;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 500px) {
+    & {
+      min-width: 375px;
+      & > .component-content {
+        & > .component-paragraph {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 690px) and (orientation: landscape) {
+    & {
+      min-width: 667px;
+      & > .component-content {
+        & > .component-header {
+          font-size: 32px;
+        }
+        & > .component-paragraph {
+          font-size: 12px;
         }
       }
     }
