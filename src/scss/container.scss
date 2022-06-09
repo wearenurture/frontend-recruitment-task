@@ -2,7 +2,6 @@
   position: relative;
   width: 1440px;
   height: 960px;
-
   background-color: #ffffff;
   &__images {
     position: absolute;
@@ -84,7 +83,11 @@
   }
 }
 @media only screen and (max-width: 424px) {
-  .container__images {
-    left: 200px;
+  .container {
+    &__images {
+      left: 120px;
+    }
+    &__text {
+    }
   }
 }
