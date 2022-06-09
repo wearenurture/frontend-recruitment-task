@@ -9,8 +9,8 @@ const cssnano = require('cssnano');
 var replace = require('gulp-replace');
 // File paths
 const files = {
-    scssPath: './src/scss/*.scss',
-    jsPath: './src/js/main.js'
+    scssPath: './src/scss/main.scss',
+    jsPath: ['./src/js/utils.js', './src/js/clickCounter.js', './src/js/closeModal.js', './src/js/openModal.js']
 };
 function scssTask() {
     return src(files.scssPath)
@@ -24,9 +24,7 @@ function scssTask() {
         ); // put final CSS in dist folder
 }
 function jsTask() {
-    return src([
-        files.jsPath
-    ])
+    return src(files.jsPath)
         .pipe(concat('all.js'))
         .pipe(uglify())
         .pipe(dest('./dist')

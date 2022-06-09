@@ -2,4 +2,4 @@ const refreshPage = () => {
     window.location.reload();
     localStorage.clear()
 }
-export default refreshPage;
+document.querySelector(".reset").addEventListener('click', refreshPage);

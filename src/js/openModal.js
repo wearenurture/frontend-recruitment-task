@@ -3,5 +3,13 @@ const openModal = (modal) => {
     modal.classList.add('active')
     overlay.classList.add('active')
 }
-export default openModal;
+const openModalButtons = document.querySelectorAll('[data-modal-target]')
+
+openModalButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const modal = document.querySelector(button.dataset.modalTarget)
+        openModal(modal)
+    })
+})
+
 

@@ -9,4 +9,4 @@ const clickCounter = () => {
     }
     document.querySelector(".display").innerHTML = localStorage.clickcount;
 }
-export default clickCounter;
+document.querySelector(".clicker").addEventListener("click", clickCounter)
