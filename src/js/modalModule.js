@@ -14,9 +14,9 @@ const modal = ({ headerContent, paragraphContent }) => {
 
   if (Number(userCounter) > 5) {
     const resetCounter = document.createElement("button");
-    resetCounter.textContent = "Resetuj licznik";
 
     resetCounter.setAttribute("class", "reset-user-counter-btn");
+    resetCounter.textContent = "Resetuj licznik";
 
     resetCounter.addEventListener("click", () => {
       sessionStorage.setItem("userCounter", 0);
@@ -26,15 +26,13 @@ const modal = ({ headerContent, paragraphContent }) => {
     dialog.appendChild(resetCounter);
   }
 
-  button.setAttribute("class", "close-modal-button");
-
   button.textContent = "X";
   header.textContent = headerContent;
   paragraph.innerHTML = paragraphContent;
 
-  modal.appendChild(dialog);
-
+  button.setAttribute("class", "close-modal-button");
   button.setAttribute("data-variant", "close-modal");
+
   modal.setAttribute("class", "modal-background");
   modal.setAttribute("data-variant", "close-modal");
 
@@ -47,6 +45,14 @@ const modal = ({ headerContent, paragraphContent }) => {
       modal.remove();
     }
   });
+
+  window.addEventListener("keyup", (e) => {
+    if (e.code === "Escape") {
+      modal.remove();
+    }
+  });
+
+  modal.appendChild(dialog);
 
   document.body.appendChild(modal);
 };

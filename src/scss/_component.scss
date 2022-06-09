@@ -13,11 +13,12 @@
 
   & > .component-content {
     @include flex(column, center, start);
-    margin: 76px 0 0 95px;
+    margin: 96px 0 0 95px;
 
     .component-header {
       font-size: 42px;
       font-weight: bold;
+      height: 50px;
       line-height: 50.4px;
     }
 
@@ -25,7 +26,7 @@
       width: 380px;
       font-weight: 300;
       font-size: 16px;
-      line-height: 24px;
+      line-height: 150%;
       margin-top: 24px;
       color: #121212;
     }
@@ -133,17 +134,6 @@
     }
   }
 
-  @media (max-width: 500px) {
-    & {
-      min-width: 375px;
-      & > .component-content {
-        & > .component-paragraph {
-          font-size: 13px;
-        }
-      }
-    }
-  }
-
   @media (max-width: 690px) and (orientation: landscape) {
     & {
       min-width: 667px;
@@ -153,6 +143,16 @@
         }
         & > .component-paragraph {
           font-size: 12px;
+        }
+      }
+    }
+  }
+  @media (max-width: 500px) {
+    & {
+      min-width: 375px;
+      & > .component-content {
+        & > .component-paragraph {
+          font-size: 14px;
         }
       }
     }

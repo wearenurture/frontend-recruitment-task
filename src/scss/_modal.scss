@@ -63,8 +63,8 @@
 
     @media (max-width: 820px) {
       & {
-        @include flex(column, center, center);
         height: 80vh;
+        @include flex(column, center, center);
 
         & > button.reset-user-counter-btn {
           position: static;
@@ -77,10 +77,19 @@
       }
     }
 
+    @media (max-width: 690px) and (orientation: landscape) {
+      & {
+        & > .modal {
+          height: 90vh;
+        }
+      }
+    }
+
     @media (max-width: 440px) {
       & {
         width: 100vw;
         font-size: 12px;
+        min-width: 375px;
 
         & > button.reset-user-counter-btn {
           position: static;

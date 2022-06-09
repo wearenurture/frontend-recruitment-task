@@ -1,4 +1,5 @@
 const root = document.getElementById("root");
+
 const content = {
   buttonContent: "Button",
   header: "Lorem Ipsum",
@@ -30,6 +31,4 @@ const srcset = [
   "./images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_1400.jpg 1400w,",
 ];
 
-createSectionModule(root, content, srcset, sizes);
-createSectionModule(root, content, srcset, sizes);
 createSectionModule(root, content, srcset, sizes);
