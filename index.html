@@ -11,8 +11,8 @@
     <link rel="stylesheet" href="dist/main.css" />
   </head>
   <body>
-    <section class="container">
-      <aside class="container__images">
+    <main class="container">
+      <section class="container__images">
         <picture>
           <source
             media="(min-width:479px)"
@@ -55,8 +55,8 @@
             alt="photo"
           />
         </picture>
-      </aside>
-      <article class="container__text">
+      </section>
+      <header class="container__text">
         <h1 class="title">Lorem Ipsum</h1>
         <p class="desc">
           Infinitely scalable, feature-rich and cloud-native data management and
@@ -64,14 +64,14 @@
           managed via a single app with no hardware required.
         </p>
         <button data-modal-target="#modal" class="clicker">button</button>
-      </article>
-    </section>
+      </header>
+    </main>
     <section class="modal" id="modal">
-      <div class="modal__header">
+      <header class="modal__header">
         <h2 class="title">Alert!</h2>
         <button class="close__button reset">reset</button>
         <button data-close-button class="close__button">&times;</button>
-      </div>
+      </header>
       <p class="modal__body">
         You have clicked <span class="display"></span> times to related button
       </p>

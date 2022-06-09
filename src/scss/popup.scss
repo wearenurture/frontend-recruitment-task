@@ -52,6 +52,7 @@
   border: none;
   outline: none;
   background: none;
+  padding: 25px 25px 0 0;
   font-size: 1.25rem;
   font-weight: bold;
   text-align: right;
@@ -63,6 +64,10 @@
   background: none;
   font-size: 1.25rem;
   font-weight: bold;
+  transition: transform 1s;
+  &:hover {
+    transform: scale(1.2);
+  }
 }
 .reset {
   visibility: hidden;
