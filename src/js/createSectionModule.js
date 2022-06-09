@@ -10,12 +10,12 @@ const createSectionModule = (root, content, srcset = [], sizes = []) => {
   let srcsetString = "";
   let sizesString = "";
 
-  for (let i = 0; i < srcset.length; i++) {
-    srcsetString += srcset[i];
+  for (const src of srcset) {
+    srcsetString += src;
   }
 
-  for (let i = 0; i < sizes.length; i++) {
-    sizesString += sizes[i];
+  for (const size of sizes) {
+    sizesString += size;
   }
 
   if (sessionStorage.getItem("userCounter")) {
