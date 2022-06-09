@@ -13,10 +13,48 @@
   <body>
     <section class="container">
       <aside class="container__images">
-        <img
-          src="images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_480.jpg"
-          alt="photo"
-        />
+        <picture>
+          <source
+            media="(min-width:479px)"
+            srcset="
+              images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_480.jpg
+            "
+          />
+          <source
+            media="(min-width:783px)"
+            srcset="
+              images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_784.jpg
+            "
+          />
+          <source
+            media="(min-width:1001px)"
+            srcset="
+              images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_1002.jpg
+            "
+          />
+          <source
+            media="(min-width:1233px)"
+            srcset="
+              images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_1234.jpg
+            "
+          />
+          <source
+            media="(min-width:1393px)"
+            srcset="
+              images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_1394.jpg
+            "
+          />
+          <source
+            media="(min-width:1399px)"
+            srcset="
+              images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_1400.jpg
+            "
+          />
+          <img
+            src="images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_480.jpg"
+            alt="photo"
+          />
+        </picture>
       </aside>
       <article class="container__text">
         <h1 class="title">Lorem Ipsum</h1>
@@ -30,7 +68,7 @@
     </section>
     <section class="modal" id="modal">
       <div class="modal__header">
-        <h2 class="title">Alert</h2>
+        <h2 class="title">Alert!</h2>
         <button class="close__button reset">reset</button>
         <button data-close-button class="close__button">&times;</button>
       </div>

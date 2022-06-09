@@ -1,37 +1,92 @@
 .container {
+  position: relative;
   width: 1440px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin: 96px auto;
+  height: 960px;
+
+  background-color: #ffffff;
   &__images {
-    margin-right: 0;
+    position: absolute;
+    width: 505px;
+    height: 330px;
+    left: 230px;
+    top: 96px;
+
+    background: url(image.png);
   }
   &__text {
-    padding-left: 0;
-    max-width: 30%;
-    text-align: left;
-    margin-left: 0;
-    h1 {
-      font-size: 3rem;
+    position: absolute;
+    width: 380px;
+    height: 250px;
+    left: 830px;
+    top: 136px;
+    .title {
+      position: absolute;
+      width: 380px;
+      height: 50px;
+      left: calc(50% - 980px / 2 + 300px);
+      top: calc(50% + 310px / 2 - 319px);
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 42px;
+      line-height: 120%;
+      color: #121212;
+    }
+    .desc {
+      position: absolute;
+      width: 380px;
+      height: 96px;
+      left: calc(50% - 980px / 2 + 300px);
+      top: calc(50% + 310px / 2 - 222px);
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 150%;
+      color: #121212;
+      text-align: justify;
     }
     button {
-      border-radius: 50px;
-      background-color: bisque;
-      max-width: 25%;
-      padding: 1% 2%;
-      color: white;
-      outline: 0px solid;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      gap: 10px;
+      position: absolute;
+      width: 128px;
+      height: 48px;
+      left: 0px;
+      top: 190px;
+      background-color: #e4c1ae;
+      border-radius: 32px;
       border: 5px solid transparent;
       -webkit-transition: all 0.2s ease-in-out;
       transition: all 0.2s ease-in-out;
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 100%;
+      color: #ffffff;
       &:hover {
         outline: 0px solid transparent;
         padding: 1% 2%;
         background-color: #8c9194;
         -webkit-transition: all 0.2s ease-in-out;
         transition: all 0.2s ease-in-out;
+        cursor: pointer;
       }
     }
+  }
+}
+@media only screen and (max-width: 1439px) {
+  .container__images {
+    max-width: 500px;
+  }
+}
+@media only screen and (max-width: 424px) {
+  .container__images {
+    left: 200px;
   }
 }
