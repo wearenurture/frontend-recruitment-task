@@ -4,7 +4,7 @@ const createSectionModule = (root, content, srcset = [], sizes = []) => {
   const button = document.createElement("button");
   const image = document.createElement("img");
   const header = document.createElement("h3");
-  const paragraph = document.createElement("paragraph");
+  const paragraph = document.createElement("p");
 
   let counter;
   let srcsetString = "";
