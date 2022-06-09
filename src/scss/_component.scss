@@ -2,13 +2,15 @@
   display: grid;
   grid-template-columns: repeat(2, minmax(200px, 1fr));
   row-gap: 10px;
-  column-gap: 95px;
+  column-gap: 50px;
   width: 1440px;
+
   height: auto;
   padding: 50px 0;
 
   & > .component-image {
-    min-width: 400px;
+    width: 505px;
+    height: 330px;
     margin: 96px 0 0 230px;
   }
 
@@ -41,12 +43,13 @@
   @media (max-width: 1040px) {
     & {
       width: 80vw;
-      min-width: 400px;
+      min-width: 495px;
       grid-template-columns: 1fr;
 
       @include flex(column, center, center);
 
       & > .component-image {
+        width: 100%;
         margin: 0;
       }
 
@@ -56,12 +59,12 @@
         text-align: center;
         margin: 0 auto;
 
-        @include flex(column, center, center);
+        @include flex(column, center, start);
 
         & > .component-paragraph {
           margin-top: 5px;
           width: auto;
-          font-size: 21px;
+          font-size: 18px;
           line-height: 32px;
 
           @media (max-width: 633px) {
@@ -96,7 +99,7 @@
 
   @media (max-width: 1040px) and (orientation: landscape) {
     & {
-      width: 100vw;
+      width: 80vw;
       min-width: 820px;
       grid-template-columns: repeat(2, minmax(200px, 1fr));
       column-gap: 10px;
@@ -105,6 +108,7 @@
       @include flex(row, start, space-around);
 
       & > .component-image {
+        width: 50%;
         margin: 0;
       }
 
@@ -116,9 +120,9 @@
         }
 
         & > .component-paragraph {
-          text-align: center;
+          text-align: left;
           height: 80%;
-          width: 50vw;
+          width: 80%;
           font-size: 14px;
           line-height: 24px;
           margin-top: 24px;
