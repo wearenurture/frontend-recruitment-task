@@ -1,0 +1,54 @@
+@mixin tablet {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media (min-width: 991px) {
+    @content;
+  }
+}
+
+@mixin mobilePadding {
+  padding: 0 16px;
+
+  @include desktop() {
+    padding: 0;
+  }
+}
+
+@mixin primaryButton {
+  background-color: $primary;
+  border-radius: 32px;
+  color: $white;
+  font-size: 16px;
+  font-weight: 700;
+  border: 0;
+  padding: 16px 40px;
+  margin-top: 24px;
+
+  &:hover {
+    cursor: pointer;
+    outline: 1px solid white;
+    outline-offset: -5px;
+  }; 
+
+  @include desktop() {
+    margin-top: 32px;
+  };
+}
+
+@mixin titleHeading {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 120%;
+
+  @include desktop() {
+    font-size: 42px;
+  }
+}
+
+$primary: #E4C1AE;
+$dark: #121212;
+$white: #FFFFFF;
+$maxWidth: 980px;

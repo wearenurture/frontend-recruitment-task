@@ -14,10 +14,14 @@
     "gulp": "^4.0.2",
     "gulp-cli": "^2.2.0",
     "gulp-concat": "^2.6.1",
+    "gulp-file-include": "^2.3.0",
     "gulp-postcss": "^8.0.0",
-    "gulp-replace": "^1.0.0",
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-uglify": "^3.0.2"
+  },
+  "dependencies": {
+    "all": "0.0.0",
+    "npm-install-all": "^1.1.21"
   }
 }

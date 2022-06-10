@@ -1,0 +1,107 @@
+.hero {
+  display: grid;
+  column-gap: 95px;
+  grid-template-columns: 1fr;
+  max-width: $maxWidth;
+  align-items: center;
+  margin: 0 auto;
+
+  @include mobilePadding();
+
+  @include desktop() {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &__image {
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    max-height: 450px;
+
+    @include desktop() {
+      grid-template-columns: repeat(2, 1fr);
+      height: 330px;
+      margin-bottom: 0;
+    }
+  }
+
+  &__popup {
+    max-width: $maxWidth;
+    display: none;
+    flex-direction: column;
+    background-color: white;
+    width: calc(100% - 2 * 16px);
+    position: fixed;
+    top: 0; 
+    left: 0;
+    transform: translate(calc(50vw - 50%), calc(50vh - 50%));
+    box-shadow:  0px 0px 0px 100vw rgba(0, 0, 0, 0.5);
+    padding: 50px 0;
+
+    h2 {
+      @include titleHeading();
+    }
+
+    p {
+      margin-top: 24px;
+      
+      span {
+        font-weight: 700;
+      }
+    }
+
+    h2, p {
+      padding: 0 10%;
+    }
+
+    button:nth-child(1) {
+      width: 42px;
+      height: 42px;
+      right: 40px;
+      top: 40px;
+      position: absolute;
+      display: block;
+      justify-content: center;
+      align-items: center;
+      border: unset;
+      background-color: unset;
+
+      :hover {
+        cursor: pointer;
+      }
+    }
+
+    .reset {
+      display: none;
+      margin: 20px 10% 0;
+      @include primaryButton();
+    }
+    
+    @include desktop() {
+      max-width: 920px;
+    }
+    
+  }
+
+  &__description {
+    width: 100%;
+    color: $dark;
+    
+    h1 {
+      @include titleHeading()
+    }
+
+    p {
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 150%;
+      padding: 0;
+      margin: 24px 0 0;
+    }
+
+    button {
+      transition: .08s ease-in-out;
+      @include primaryButton();      
+    }
+  }
+}
