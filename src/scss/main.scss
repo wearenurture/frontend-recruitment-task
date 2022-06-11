@@ -1,0 +1,188 @@
+$primary-color: #121212;
+$second-color: #FFFFFF;
+
+$breakpoints-small: 768px;
+$breakpoints-large: 1200px;
+
+ 
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+.section {
+    max-width: 1440px;
+    font-style: normal;
+    font-family: 'Roboto', sans-serif;
+
+    .section_container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        color: $primary-color;
+        @media (min-width: $breakpoints-large) {
+            flex-direction: row;
+            flex-wrap: nowrap;
+
+        }
+        .section_img {
+            width: 80%;
+            max-width: 505px;
+            @media (min-width: $breakpoints-large) {
+                height: 330px;
+                margin-top: 96px;
+                margin-left: 230px;
+                margin-right: 95px;
+            }
+        }
+        .section_aside {
+            width: 80%;
+            @media (min-width: $breakpoints-large) {
+                width: 380px;
+                height: 250px;
+                margin-top: 136px;
+            }
+
+            .section_header {
+                text-align: center;
+                font-size: 24px;
+                line-height: 120%;
+                font-weight: 700;
+                @media (min-width: $breakpoints-small) {
+                    margin-top: 50px;
+                    font-size: 35px;
+                }
+                @media (min-width: $breakpoints-large) {
+                   margin: 0;
+                   text-align: left;
+                }
+
+            }
+            .section_text {
+                font-size: 16px;
+                line-height: 150%;
+                font-weight: 300;
+                @media (min-width: $breakpoints-large) {
+                    margin: 24px 0 32px;
+                }
+            }
+            .section_button {
+                display: block;
+                margin: 30px auto 0;
+                font-size: 16px;
+                line-height: 16px;
+                padding: 12px 30px;
+                border-radius: 32px;
+                border: none;
+                color: $second-color;
+                background-color: #E4C1AE;
+                cursor: pointer;
+                @media (min-width: $breakpoints-small) {
+                    padding: 16px 40px;
+                    font-weight: 700;
+                }
+                @media (min-width: $breakpoints-large) {
+                    margin: 0;
+                    width: 128px;
+
+                }
+
+            }
+        }
+    }
+
+    .popup {
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%) scale(0);
+        transition: 300ms;
+        width: 90%;
+        z-index: 5;
+        background-color: $second-color;
+        @media (min-width: $breakpoints-large) {
+            width: 920px;
+            height: 210px;
+        }
+        .popup_header {
+            font-size: 32px;
+            text-align: center;
+            font-weight: 700;
+            line-height: 120%;
+            @media (min-width: $breakpoints-small) {
+                font-size: 38px;
+            }
+            @media (min-width: $breakpoints-large) {
+                text-align: left;
+                font-size: 42px;
+                margin: 56px 0 24px 95px;
+            }
+        }
+        .popup_text {
+            font-weight: 300;
+            line-height: 150%;
+            font-size: 12px;
+            text-align: center;
+            @media (min-width: $breakpoints-small) {
+                font-size: 16px;
+                line-height: 24px; 
+            }
+            @media (min-width: $breakpoints-large) {
+                text-align: left;
+                margin-left: 95px;
+
+            }
+        }
+        .popup_closeBtn {
+            position: absolute;
+            top: 4%;
+            right: 4%;
+            font-size: 24px;
+            cursor: pointer;
+            @media (min-width: $breakpoints-large) {
+                top: 40px;
+                right: 40px;
+            }
+        }
+        .popup_resetBtn {
+            display: block;
+            margin: 15px auto;
+            font-size: 14px;
+            padding: 10px 25px;
+            border-radius: 32px;
+            border-color: transparent;
+            color: $primary-color;
+            background-color: #89ccf0;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            @media (min-width: $breakpoints-small) {
+                font-size: 16px;
+                margin-top: 20px;
+            }
+            @media (min-width: $breakpoints-large) {
+                margin: 2px 0 0 95px;
+                padding: 5px 15px;
+            }
+        }
+    }
+    .section_shadow {
+        transform: scale(0);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $primary-color;
+        opacity: 0.5;
+    }
+    .popup.active {
+        transform:translate(-50%,-50%) scale(1);
+    }
+    .section_shadow.active {
+        transform: scale(1);
+    }
+}
