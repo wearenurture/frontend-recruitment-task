@@ -1,0 +1,1 @@
+{"version":3,"sources":["main.scss"],"names":[],"mappings":"AAAA,EACI,qBAAsB,CACtB,QAAS,CACT,SAAU,CAEd,oBACI,qBAAsB,CAC1B,gBAEI,qBAAuB","file":"main.css","sourcesContent":["*{\r\n    box-sizing: border-box;\r\n    margin: 0;\r\n    padding: 0;\r\n}\r\n.section__container{\r\n    background-color: blue;}\r\n.section__aside{\r\n    \r\n    background-color: black;\r\n}"]}
