@@ -2,6 +2,7 @@ $color-black: #121212;
 $color-white: #FFFFFF;
 $btn-color:#E4C1AE;
 $font-roboto: "Roboto",sans-serif;
+
 *{
     box-sizing: border-box;
     margin:0;
@@ -39,7 +40,7 @@ $font-roboto: "Roboto",sans-serif;
             font-weight: 700;
         }
         .section__aside-text{
-            font-size: 0.9rem;
+            font-size: 0.7rem;
             font-weight: 300;
             line-height: 130%; 
         }
@@ -61,10 +62,10 @@ $font-roboto: "Roboto",sans-serif;
     .popup{
         position: fixed;
         left: 25%;
-        top: 13%;
+        top: 4.5%;
         width: 50%;
-        height: 10%;
-        padding: 22px 40px;
+        height: 4%;
+        padding: 10px 40px;
         z-index: 2;
         background-color: $color-white;
         .popup__title{
@@ -85,19 +86,22 @@ $font-roboto: "Roboto",sans-serif;
         .popup__close-btn{
             width: 25px;
             height: 25px;
-            background: green;
             position:absolute;
             -webkit-trandorm:translate(1240%,-280%);
             -moz-transform:translate(1240%,-280%);
             -o-transform:translate(1240%,-280%);
             transform: translate(1240%,-280%);
         }
+        .popup__close-btn:hover{
+            background: $color-black;
+            opacity: 0.5;
+        }
         .popup__close-btn > div {
             width: 25px;
             height: 3px;
             background: $color-black;
             position:relative;
-            top: 8px;
+            left: -65px;
             -webkit-trandorm: rotate(-45deg);
             -moz-transform:rotate(-45deg);
             -o-transform:rotate(-45deg);
@@ -106,7 +110,8 @@ $font-roboto: "Roboto",sans-serif;
         }
         .popup__close-btn > div:first-child{
             position:relative;
-            top: 10px;
+            top:3px;
+            left: -65px;
             -webkit-trandorm: rotate(45deg);
             -moz-transform:rotate(45deg);
             -o-transform:rotate(45deg);
