@@ -1,69 +1,176 @@
-.popupBackground{
-    z-index: 2000;
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
+.backgroundPopup{
+    position: fixed;
+    z-index: 1999;
     top: 0;
     left: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
     background: rgba($color: #121212, $alpha: 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Roboto', sans-serif;
-
-    &__popup{
-        width: 920px;
-height: 210px;
-position: relative;
-background: #FFFFFF;
-padding: 56px 0 0 95px;
-&--exit {
-    position: absolute;
-    right: 40px;
-    top: 46px;
-    width: 12px;
-    height: 12px;
-    opacity: 1;
-    &:hover {
-        opacity: 0.3;
-      }
-    &:before, &:after {
-        position: absolute;
-        content: ' ';
-        height: 12px;
-        width: 2px;
-        background-color: #333;
-      }
-      &:before {
-        transform: rotate(45deg);
-      }
-      &:after {
-        transform: rotate(-45deg);
-      }
-  }
-  &--title{
-    font-style: normal;
-    font-weight: 700;
-    font-size: 42px;
-    line-height: 120%;
-    color: #121212;
-  }
-  &--text{
-      margin-top: 24px;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 150%;
-    color: #121212;
-  }
-  &--boldText{
-    font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 150%;
-    color: #121212;
-  }
-  
+}
+.popupModal{
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+    h2,p {
+        margin: 0;
+        line-height: normal;
+        font-weight: 400;
     }
-
+    position: fixed;
+    z-index: 2000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    overflow: hidden;
+    box-sizing: border-box;
+    width: calc(100vw * 0.638888);
+    height: calc(100vw * 0.145833);
+    font-family: 'Roboto', sans-serif;
+    @media screen and (min-width:1440px) {
+        width: 920px;
+        height: 210px;
+    }
+    @media screen and (max-width:783px){
+        width: calc(100vw - (100vw * 0.07));
+        height: calc(100vw - (100vw * 0.4));
+    }
+    
+    &__popup{
+        width: 100%;
+        height: 100%;
+        padding: calc(100vw * 0.03888) 0 0 calc(100vw * 0.06597222);
+        background: #FFFFFF;
+        @media screen and (min-width:1440px) {
+            padding: 56px 0 0 95px;
+        }
+        @media screen and (max-width:783px){
+            padding: calc(100vw * 0.08888) 0 0;
+        }
+        &--exit {
+            outline:none;
+            position: absolute;
+            top: calc(100vw * 0.02777);
+            right: calc(100vw * 0.02777);
+            opacity: 1;
+            border:none;
+            width: calc(100vw * 0.008333);
+            height: calc(100vw * 0.008333);
+            background-color: unset;
+            @media screen and (min-width:1440px) {
+                top: 40px;
+                right: 40px;
+                width: 12px;  
+                height: 12px;
+            }
+            @media screen and (max-width:783px){
+                width: calc(100vw * 0.008333 * 3);
+                height: calc(100vw * 0.008333 * 3);
+            }
+            &:focus, &:hover{
+                opacity: 0.3;
+            }
+            &:before, &:after {
+                position: absolute;
+                width: 2px;
+                height: calc(100vw * 0.008333);
+                content: ' ';
+                background-color: #333;
+                @media screen and (min-width:1440px) {
+                    height: 12px;
+                }
+                @media screen and (max-width:783px){
+                    height: calc(100vw * 0.008333 * 3);
+                }
+            }
+            &:before {
+                transform: rotate(45deg);
+            }
+            &:after {
+                transform: rotate(-45deg);
+            }
+        }
+        &--title{
+            font-size: calc(100vw * 0.0291);
+            line-height: 120%;
+            font-weight: 700;
+            font-style: normal;
+            color: #121212;
+            @media screen and (min-width:1440px) {
+                font-size: 42px;
+            }
+            @media screen and (max-width:783px){
+                text-align: center;
+                font-size: calc(100vw * 0.0291 * 2);
+            }
+        }
+        &--text{
+            margin-top: calc(100vw * 0.01666);
+            font-size: calc(100vw * 0.0111);
+            line-height: 150%;
+            font-weight: 300;
+            font-style: normal;
+            color: #121212;
+            @media screen and (min-width:1440px) {
+                margin-top: 24px;
+                font-size: 16px;
+            }
+            @media screen and (max-width:783px){
+                width: calc(100vw - (100vw * 0.07));
+                font-size: calc(100vw * 0.011 * 2.4);
+                text-align: center;
+            }
+        }
+        &--boldText{
+            font-size: calc(100vw * 0.0111);
+            line-height: 150%;
+            font-weight: 600;
+            font-style: normal;
+            color: #121212;
+            @media screen and (max-width:783px){
+                width: calc(100vw - (100vw * 0.07));
+                font-size: calc(100vw * 0.011 * 2.4);
+            }
+        }
+        &--reset{
+            position: absolute;
+            bottom: 20px;
+            right: 40px;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            padding: calc(100vw * 0.0111) calc(100vw * 0.02777);
+            gap: 10px;
+            border: none;
+            border-radius: 32px;
+            width: calc(100vw * 0.0888);
+            height: calc(100vw * 0.0333);
+            background: #E4C1AE;
+            font-size: calc(100vw * 0.0111);
+            line-height: 100%;
+            font-weight: 700;
+            color: #FFFFFF;
+            &:focus, &:hover{
+                opacity: 0.3;
+            }
+            @media screen and (min-width:1440px) {
+                margin-top: 32px;
+                width: 128px;
+                height: 48px;
+                padding: 16px 40px;
+                font-size: 16px;
+            }
+            @media screen and (max-width:783px){
+                left: 50%;
+                transform: translate(-50%);
+            }
+            @media screen and (max-width:783px){
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: calc(100vw - (100vw * 0.5));
+                height: calc(100vw - (100vw * 0.88));
+                font-size: calc(100vw * 0.011 * 4);
+            }
+        }
+    }
 }

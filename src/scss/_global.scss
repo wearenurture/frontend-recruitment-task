@@ -1,15 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 
-* {
-    box-sizing: border-box;
-    outline: none;
-  }
 
   html, body {
     margin: 0;
     padding: 0;
-    
-  
   }
   html {
     overflow-x: hidden;
@@ -19,15 +13,9 @@
   body {
     width: 100%;
     overflow: hidden;
-    background-color: #FFFFFF;
     min-height: 100vh;
     position: relative;
   }
   
-
   
-  h1,h2,h3,h4,h5,h6,p {
-    margin: 0;
-    line-height: normal;
-    font-weight: 400;
-  }
+  
