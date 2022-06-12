@@ -68,6 +68,9 @@ $font-roboto: "Roboto",sans-serif;
         padding: 10px 40px;
         z-index: 2;
         background-color: $color-white;
+        @media(min-width: 799px){
+            padding: 20px 40px;
+        }
         .popup__title{
             font-size: 1.6rem;
             font-weight: 700;
@@ -106,6 +109,10 @@ $font-roboto: "Roboto",sans-serif;
             -moz-transform:rotate(-45deg);
             -o-transform:rotate(-45deg);
             transform:rotate(-45deg);
+            @media(min-width: 799px){
+                left: 10px;
+                top: 18px;
+            }
             
         }
         .popup__close-btn > div:first-child{
@@ -116,7 +123,12 @@ $font-roboto: "Roboto",sans-serif;
             -moz-transform:rotate(45deg);
             -o-transform:rotate(45deg);
             transform:rotate(45deg);
+            @media(min-width: 799px){
+                left: 10px;
+                top: 21px;
+            }
         }
+        
     }
     .popup__shadow{
         position: fixed;
