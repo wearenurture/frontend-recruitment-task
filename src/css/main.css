@@ -1,0 +1,428 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  overflow: hidden;
+  background-color: #FFFFFF;
+  min-height: 100vh;
+  position: relative;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  line-height: normal;
+  font-weight: 400;
+}
+
+.container {
+  width: 100%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 10px auto 0 auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #FFFFFF;
+  font-family: 'Roboto', sans-serif;
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    width: 1440px;
+    margin: 96px auto 0 auto;
+  }
+}
+
+@media screen and (min-width: 1394px) and (max-width: 1439px) {
+  .container {
+    width: 1394px;
+    margin: 86px auto 0 auto;
+  }
+}
+
+@media screen and (min-width: 1234px) and (max-width: 1393px) {
+  .container {
+    width: 1234px;
+    margin: 76px auto 0 auto;
+  }
+}
+
+@media screen and (min-width: 1002px) and (max-width: 1233px) {
+  .container {
+    width: 1002px;
+    margin: 66px auto 0 auto;
+  }
+}
+
+@media screen and (min-width: 784px) and (max-width: 1001px) {
+  .container {
+    width: 784px;
+    margin: 56px auto 0 auto;
+  }
+}
+
+@media screen and (min-width: 767px) and (max-width: 783px) {
+  .container {
+    width: 767px;
+    margin: 46px auto 0 auto;
+  }
+}
+
+@media screen and (min-width: 720px) and (max-width: 766px) {
+  .container {
+    width: 720px;
+  }
+}
+
+@media screen and (min-width: 694px) and (max-width: 719px) {
+  .container {
+    width: 694px;
+  }
+}
+
+@media screen and (min-width: 630px) and (max-width: 693px) {
+  .container {
+    width: 630px;
+  }
+}
+
+@media screen and (min-width: 596px) and (max-width: 629px) {
+  .container {
+    width: 596px;
+  }
+}
+
+@media screen and (min-width: 538px) and (max-width: 595px) {
+  .container {
+    width: 530px;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 537px) {
+  .container {
+    width: 480px;
+  }
+}
+
+@media screen and (min-width: 450px) and (max-width: 479px) {
+  .container {
+    width: 450px;
+  }
+}
+
+@media screen and (max-width: 449px) {
+  .container {
+    width: 320px;
+  }
+}
+
+@media screen and (max-width: 766px) {
+  .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+}
+
+.container__column:first-child {
+  margin-right: 95px;
+}
+
+@media screen and (max-width: 767px) {
+  .container__column:first-child {
+    margin-right: 0;
+  }
+}
+
+.container__column--image {
+  width: 100%;
+  height: auto;
+}
+
+@media screen and (min-width: 1440px) {
+  .container__column--image {
+    width: 505px;
+    height: 330px;
+  }
+}
+
+@media screen and (min-width: 1394px) and (max-width: 1439px) {
+  .container__column--image {
+    width: calc(1394px * 0.35);
+  }
+}
+
+@media screen and (min-width: 1234px) and (max-width: 1393px) {
+  .container__column--image {
+    width: calc(1234px * 0.35);
+  }
+}
+
+@media screen and (min-width: 1002px) and (max-width: 1233px) {
+  .container__column--image {
+    width: calc(1002px * 0.35);
+  }
+}
+
+@media screen and (min-width: 784px) and (max-width: 1001px) {
+  .container__column--image {
+    width: calc(784px * 0.35);
+  }
+}
+
+@media screen and (min-width: 767px) and (max-width: 783px) {
+  .container__column--image {
+    width: calc(767px * 0.35);
+  }
+}
+
+.container__column--title {
+  margin-top: 10px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+  color: #121212;
+}
+
+@media screen and (min-width: 1440px) {
+  .container__column--title {
+    font-size: 42px;
+    margin-top: 40px;
+  }
+}
+
+@media screen and (min-width: 1394px) and (max-width: 1439px) {
+  .container__column--title {
+    font-size: 40px;
+    margin-top: 35px;
+  }
+}
+
+@media screen and (min-width: 1234px) and (max-width: 1393px) {
+  .container__column--title {
+    font-size: 38px;
+    margin-top: 30px;
+  }
+}
+
+@media screen and (min-width: 1002px) and (max-width: 1233px) {
+  .container__column--title {
+    font-size: 36px;
+    margin-top: 25px;
+  }
+}
+
+@media screen and (min-width: 784px) and (max-width: 1001px) {
+  .container__column--title {
+    font-size: 32px;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (min-width: 400px) and (max-width: 783px) {
+  .container__column--title {
+    font-size: 30px;
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 399px) {
+  .container__column--title {
+    font-size: 28px;
+  }
+}
+
+.container__column--text {
+  margin-top: 24px;
+  width: 100%;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 150%;
+  color: #121212;
+}
+
+@media screen and (min-width: 1440px) {
+  .container__column--text {
+    font-size: 16px;
+    width: 380px;
+  }
+}
+
+@media screen and (min-width: 1394px) and (max-width: 1439px) {
+  .container__column--text {
+    font-size: 14px;
+    width: calc(1394px * 0.26);
+  }
+}
+
+@media screen and (min-width: 1234px) and (max-width: 1393px) {
+  .container__column--text {
+    font-size: 13px;
+    width: calc(1234px * 0.26);
+  }
+}
+
+@media screen and (min-width: 1002px) and (max-width: 1233px) {
+  .container__column--text {
+    font-size: 12px;
+    width: calc(1002px * 0.26);
+  }
+}
+
+@media screen and (min-width: 784px) and (max-width: 1001px) {
+  .container__column--text {
+    font-size: 11px;
+    width: calc(784px * 0.26);
+  }
+}
+
+@media screen and (min-width: 767px) and (max-width: 783px) {
+  .container__column--text {
+    width: calc(767px * 0.26);
+  }
+}
+
+@media screen and (min-width: 400px) and (max-width: 783px) {
+  .container__column--text {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 399px) {
+  .container__column--text {
+    font-size: 9px;
+  }
+}
+
+.container__column--button {
+  margin-top: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 16px 40px;
+  gap: 10px;
+  width: 128px;
+  height: 48px;
+  background: #E4C1AE;
+  border-radius: 32px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 100%;
+  color: #FFFFFF;
+  border: none;
+}
+
+.popupBackground {
+  z-index: 2000;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(18, 18, 18, 0.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+.popupBackground__popup {
+  width: 920px;
+  height: 210px;
+  position: relative;
+  background: #FFFFFF;
+  padding: 56px 0 0 95px;
+}
+
+.popupBackground__popup--exit {
+  position: absolute;
+  right: 40px;
+  top: 46px;
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+}
+
+.popupBackground__popup--exit:hover {
+  opacity: 0.3;
+}
+
+.popupBackground__popup--exit:before, .popupBackground__popup--exit:after {
+  position: absolute;
+  content: ' ';
+  height: 12px;
+  width: 2px;
+  background-color: #333;
+}
+
+.popupBackground__popup--exit:before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.popupBackground__popup--exit:after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.popupBackground__popup--title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 120%;
+  color: #121212;
+}
+
+.popupBackground__popup--text {
+  margin-top: 24px;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 150%;
+  color: #121212;
+}
+
+.popupBackground__popup--boldText {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+  color: #121212;
+}

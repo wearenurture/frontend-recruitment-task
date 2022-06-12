@@ -1,0 +1,183 @@
+.container{
+    width: 100%;
+    position: relative;
+    display: flex;
+    margin: 10px auto 0 auto;
+    justify-content: center;
+    background-color: #FFFFFF;
+    font-family: 'Roboto', sans-serif;
+    @media screen and (min-width:1440px) {
+        width: 1440px;
+        margin: 96px auto 0 auto;
+    }
+    @media screen and (min-width:1394px) and (max-width:1439px){
+        width: 1394px;
+        margin: 86px auto 0 auto;
+    }
+    @media screen and (min-width:1234px) and (max-width:1393px){
+        width: 1234px;
+        margin: 76px auto 0 auto;
+    }
+    @media screen and (min-width:1002px) and (max-width:1233px){
+        width: 1002px;
+        margin: 66px auto 0 auto;
+    }
+    @media screen and (min-width:784px) and (max-width:1001px){
+        width: 784px;
+        margin: 56px auto 0 auto;
+    }
+    @media screen and (min-width:767px) and (max-width:783px){
+        width: 767px;
+        margin: 46px auto 0 auto;
+    }
+    @media screen and (min-width:720px) and (max-width:766px){
+        width: 720px;
+    }
+    @media screen and (min-width:694px) and (max-width:719px){
+        width: 694px;
+    }
+    @media screen and (min-width:630px) and (max-width:693px){
+        width: 630px;
+    }
+    @media screen and (min-width:596px) and (max-width:629px){
+        width: 596px;
+    }
+    @media screen  and (min-width:538px) and (max-width:595px){
+        width: 530px;
+    }
+    @media screen and (min-width:480px) and (max-width:537px){
+        width: 480px;
+    }
+    @media screen and (min-width:450px) and (max-width:479px){
+        width: 450px;
+    }
+    @media screen and (max-width:449px){
+        width: 320px;
+    }
+    @media screen and (max-width:766px){
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+    }
+    &__column{
+            &:first-child{
+                margin-right: 95px;
+                @media screen and (max-width:767px){
+                    margin-right: 0;
+                }
+            }
+            &--image{
+                width: 100%;
+                height: auto;
+                @media screen and (min-width:1440px) {
+                    width: 505px;
+                    height: 330px;
+                }
+                @media screen and (min-width:1394px) and (max-width:1439px){
+                    width: calc(1394px * 0.35);
+                }
+                @media screen and (min-width:1234px) and (max-width:1393px){
+                    width: calc(1234px * 0.35);
+                }
+                @media screen and (min-width:1002px) and (max-width:1233px){
+                    width: calc(1002px * 0.35);
+                }
+                @media screen and (min-width:784px) and (max-width:1001px){
+                    width: calc(784px * 0.35);
+                }
+                @media screen and (min-width:767px) and (max-width:783px){
+                    width: calc(767px * 0.35);
+                }
+            }
+            &--title{
+                margin-top: 10px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 120%;
+                color: #121212;
+                @media screen and (min-width:1440px) {
+                    font-size: 42px;
+                    margin-top: 40px;
+                }
+                @media screen and (min-width:1394px) and (max-width:1439px){
+                    font-size: 40px;
+                    margin-top: 35px;
+                }
+                @media screen and (min-width:1234px) and (max-width:1393px){
+                    font-size: 38px;
+                    margin-top: 30px;
+                }
+                @media screen and (min-width:1002px) and (max-width:1233px){
+                    font-size: 36px;
+                    margin-top: 25px;
+                }
+                @media screen and (min-width:784px) and (max-width:1001px){
+                    font-size: 32px;
+                    margin-top: 20px;
+                }
+                @media screen and(min-width:400px) and (max-width:783px){
+                    font-size: 30px;
+                    margin-top: 10px;
+                }
+                @media screen and (max-width:399px){
+                    font-size: 28px;
+                }
+            }
+            &--text{
+                margin-top: 24px;
+                width: 100%;
+                font-style: normal;
+                font-weight: 300;
+                line-height: 150%;
+                color: #121212;
+                @media screen and (min-width:1440px) {
+                    font-size: 16px;
+                    width: 380px;
+                }
+                @media screen and (min-width:1394px) and (max-width:1439px){
+                    font-size: 14px;
+                    width: calc(1394px * 0.26);
+                }
+                @media screen and (min-width:1234px) and (max-width:1393px){
+                    font-size: 13px;
+                    width: calc(1234px * 0.26);
+                }
+                @media screen and (min-width:1002px) and (max-width:1233px){
+                    font-size: 12px;
+                    width: calc(1002px * 0.26);
+                }
+                @media screen and (min-width:784px) and (max-width:1001px){
+                    font-size: 11px;
+                    width: calc(784px * 0.26);
+                }
+                @media screen and (min-width:767px) and (max-width:783px){
+                    width: calc(767px * 0.26);
+                }
+                @media screen and(min-width:400px) and (max-width:783px){
+                    font-size: 10px;
+                }
+                @media screen and (max-width:399px){
+                    font-size: 9px;
+                }
+            }
+            &--button{
+                margin-top: 32px;
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                padding: 16px 40px;
+                gap: 10px;
+                width: 128px;
+                height: 48px;
+                background: #E4C1AE;
+                border-radius: 32px;
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 100%;
+                color: #FFFFFF;
+                border: none;
+            }
+
+        
+    }
+}
