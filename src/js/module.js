@@ -56,17 +56,6 @@ const clearButtonHandler = () => {
     content.innerHTML = `You have clicked <span>${localStorage.getItem('numberOfClicks')} times</span> to related button.`;
 }
 
-// const setCounterInSpan = (counter) => {
-
-//     let content = document.querySelector('.modal__content');
-
-//     if (!counter || Number(counter) === 0) {
-//         content.innerHTML = `You have clicked <span>1 time</span> to related button.`;
-//     } else {
-//         content.innerHTML = `You have clicked <span>${current_number} times</span> to related button.`;
-//     }
-
-// }
 
 const checkAndWriteClickToLocalStorage = () => {
     let current_number = localStorage.getItem('numberOfClicks');
@@ -112,25 +101,31 @@ const createImage = (alt, title) => {
     return img;
 }
 
-const createTitle = (text) => {
+const createTitle = (text, class_name) => {
     const title = document.createElement('h1');
 
+    title.setAttribute('aria-description', 'Nagłówek')
     title.innerText = text ? text : "";
+    title.classList.add(`${class_name}__title`)
 
     return title;
 }
 
-const createContentText = (text) => {
+const createContentText = (text, class_name) => {
     const content = document.createElement("p");
 
+    content.setAttribute('aria-description', 'Zawartość paragrafu')
     content.innerText = text ? text : "";
+    content.classList.add(`${class_name}__content`)
 
     return content;
 }
 
-const createButton = () => {
+const createButton = (class_name) => {
     const button = document.createElement("button");
     button.innerText = "Button";
+    button.classList.add(`${class_name}__button`)
+    button.setAttribute('aria-description', 'kliknij przycisk by otworzyć popup');
     button.addEventListener('click', () => onClickHandler())
 
     return button;
@@ -150,18 +145,18 @@ export const createSection = (class_name, title, content, img_alt, img_title) =>
 
     //create left container
     const left_container = createContainer();
-    left_container.classList.add('left_container');
+    left_container.classList.add(`${class_name}__left_container`);
    
     const img = createImage(img_alt, img_title);
 
     //create right container
 
     const right_container = createContainer();
-    right_container.classList.add('right_container');
+    right_container.classList.add(`${class_name}__right_container`);
 
-    const header = title ? createTitle(title) : createTitle("");
-    const text = content ? createContentText(content) : createContentText("");
-    const button = createButton();
+    const header = title ? createTitle(title, class_name) : createTitle("", class_name);
+    const text = content ? createContentText(content, class_name) : createContentText("", class_name);
+    const button = createButton(class_name);
 
     left_container.appendChild(img);
     right_container.appendChild(header);

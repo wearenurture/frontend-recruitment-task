@@ -17,7 +17,7 @@ body {
     }
 }
 
-.left_container {
+.module__left_container {
     width: 51%;
 
     @media screen and(max-width: 1000px) {
@@ -30,7 +30,7 @@ body {
     }    
 }
 
-.right_container {
+.module__right_container {
     width: 49%;
 
     @media screen and(max-width: 1000px) {
@@ -59,7 +59,7 @@ img {
     }
 }
 
-h1 {
+.module__title {
     margin-top: 136px;
     margin-bottom: 0;
     margin-left: 95px;
@@ -75,7 +75,7 @@ h1 {
      }
 }
 
-p {
+.module__content {
     margin-top: 24px;
     margin-bottom: 0;
     margin-left: 95px;
@@ -94,7 +94,7 @@ p {
      }
 }
 
-button {
+.module__button {
     margin-top: 32px;
     margin-left: 95px;
     width: 128px;
@@ -109,6 +109,7 @@ button {
     color: #fff;
     cursor: pointer;
     font-family: 'Roboto', sans-serif;
+    outline: none;
 
     @media screen and(max-width: 1000px) {
         margin-left: calc(50% - 64px);
