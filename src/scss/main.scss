@@ -57,10 +57,6 @@ img {
         height: auto;
         content: url('../../images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_784.jpg')
     }
-    
-    @media screen and(min-width: 1440px) {
-        content: url('../../images/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale,w_480.jpg')
-    }
 }
 
 h1 {
@@ -120,3 +116,75 @@ button {
         margin-bottom: 20px;
      }
 }
+
+.modal {
+    display: none;
+  }
+  
+  .modal.is-open {
+    display: block;
+  }
+
+  .modal__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal__container {
+    background-color: #fff;
+    width: 920px;
+    height: 210px;
+    border-radius: 4px;
+    overflow-y: auto;
+    font-family: 'Roboto', sans-serif;
+
+    @media screen and(max-width: 1000px) {
+        width: 70%;
+    }
+  }
+
+  .modal__title {
+      margin-top: -8px;
+      margin-left: 95px;
+      font-weight: 700;
+      font-size: 42px;
+      line-height: 120%;
+      color: #121212;
+
+      @media screen and(max-width: 1000px) {
+          margin-left: 5%;
+      }
+  }
+
+  .modal__close {
+      margin-top: 40px;
+      margin-left: calc(100% - 24px - 40px);
+      width: 24px;
+      height: 24px;
+      background: url('../../images/x-icon.png');
+      background-repeat: no-repeat;
+      padding: 0;
+
+      @media screen and(max-width: 1000px) {
+        margin-top: 5%;
+        margin-left: calc(95% - 24px);
+    }
+  }
+
+  .modal__content {
+    margin-left: 95px;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+
+    @media screen and(max-width: 1000px) {
+        margin-left: 5%;
+    }
+  }

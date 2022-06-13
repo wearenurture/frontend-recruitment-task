@@ -21,6 +21,7 @@
     "gulp-uglify": "^3.0.2"
   },
   "dependencies": {
+    "micromodal": "^0.4.10",
     "sass": "^1.52.3"
   }
 }

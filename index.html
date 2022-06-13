@@ -6,10 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
     <link href="./dist/main.css" rel="stylesheet" />
     <title>Krzysztof Matyga - Recruitment task</title>
 </head>
 <body>
     <script src="src/js/main.js" type="module"></script>
+    <div id="modal-1" class="modal" aria-hidden="true">
+        <div tabindex="-1"  class="modal__overlay" data-micromodal-close>
+          <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title" >
+            <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+            <header>
+              <h2 id="modal-1-title" class="modal__title">
+                Alert!
+              </h2>
+            </header>
+            <div class="modal__content" id="modal-1-content">
+                You have clicked X times to related button.
+            </div>
+          </div>
+        </div>
+      </div>
 </body>
