@@ -9,7 +9,7 @@ body {
     height: 100vh;
     max-width: 1440px;
     display: flex;
-    background-color: yellow;
+    font-family: 'Roboto', sans-serif;
 
     @media screen and(max-width: 1000px) {
         flex-direction: column;
@@ -106,12 +106,13 @@ button {
     border-radius: 32px;
     padding: 16px 40px;
     border: none;
-    background-color: #C4C1AE;
+    background-color: #E4C1AE;
     font-weight: 700;
     font-size: 16px;
     line-height: 100%;
     color: #fff;
     cursor: pointer;
+    font-family: 'Roboto', sans-serif;
 
     @media screen and(max-width: 1000px) {
         margin-left: calc(50% - 64px);
