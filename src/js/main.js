@@ -7,7 +7,7 @@ const text = "Infinitely scalable, feature-rich and cloud-native data management
 
 const module = createSection("module", title, text, "alternatywny tekst", "tytuł obrazka");
 
-const module1 = createSection("module", title, text, "alternatywny tekst", "tytuł obrazka");
 
 document.body.appendChild(module);
-document.body.appendChild(module1);
+
+

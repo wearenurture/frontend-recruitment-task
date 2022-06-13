@@ -147,12 +147,14 @@ button {
 
     @media screen and(max-width: 1000px) {
         width: 70%;
+        min-height: 210px;
     }
   }
 
   .modal__title {
       margin-top: -8px;
       margin-left: 95px;
+      margin-bottom: 24px;
       font-weight: 700;
       font-size: 42px;
       line-height: 120%;
@@ -172,6 +174,10 @@ button {
       background-repeat: no-repeat;
       padding: 0;
 
+      @media screen and(max-width: 751px) {
+        margin-bottom: 0;
+    }
+
       @media screen and(max-width: 1000px) {
         margin-top: 5%;
         margin-left: calc(95% - 24px);
@@ -184,7 +190,41 @@ button {
     font-size: 16px;
     line-height: 24px;
 
+    span {
+        font-weight: 500;
+    }
+
     @media screen and(max-width: 1000px) {
         margin-left: 5%;
     }
+  }
+
+  .modal__clear {
+    margin-top: 0;
+    margin-left: calc(100% - 144px - 40px);
+    width: 144px;
+    height: 34px;
+    border-radius: 32px;
+    padding: 10px 10px;
+    border: none;
+    background-color: #E4C1AE;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    color: #fff;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+
+    @media screen and(max-width: 751px) {
+        margin-top: 10px;
+        margin-bottom: 0;
+    }
+
+    @media screen and(max-width: 1000px) {
+        margin-bottom: 0;
+    }
+  }
+
+  .hidden {
+      display: none;
   }
