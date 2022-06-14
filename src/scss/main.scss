@@ -49,13 +49,13 @@ img {
     margin-left: auto;
     width: 505px;
     height: 330px;
-    content: url('../../dist/img/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale\,w_480.webp');
+    content: url('./dist/img/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale\,w_480.webp');
 
     @media screen and(max-width: 1000px) {
         margin-top: 20px;
         width: 100%;
         height: auto;
-        content: url('../../dist/img/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale\,w_784.webp')
+        content: url('./dist/img/sean-o-KMn4VEeEPR8-unsplash_1_s6zmfh_c_scale\,w_784.webp')
     }
 }
 
@@ -173,7 +173,7 @@ img {
       margin-left: calc(100% - 24px - 40px);
       width: 24px;
       height: 24px;
-      background: url('../../dist/img/x-icon.webp');
+      background: url('./dist/img/x-icon.webp');
       background-repeat: no-repeat;
       padding: 0;
       border: none;
