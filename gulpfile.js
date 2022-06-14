@@ -27,7 +27,7 @@ function scssTask(){
 
 function jsTask(){
     return src([
-        files.jsPath
+        files.jsPath, 'node_modules/micromodal/dist/micromodal.es.js'
         ])
         .pipe(concat('all.js'))
         .pipe(uglify())

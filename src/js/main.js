@@ -1,6 +1,3 @@
-import MicroModal from '../../node_modules/micromodal/dist/micromodal.es.js';
-
-
 
 const title = "Lorem ipsum";
 const text = "Infinitely scalable, feature-rich and cloud-native data management and protection for modern and legacy infrastructures and SaaS platforms, managed via a single app with no hardware required."
