@@ -9,6 +9,7 @@ const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 var replace = require('gulp-replace');
 const imagemin = require('gulp-imagemin');
+const imagewebp = require('gulp-webp');
 
 
 // File paths
@@ -40,7 +41,13 @@ function jsTask(){
 function img() {
     return src('./src/img/*')
         .pipe(imagemin())
-        .pipe(dest('dist'));
+        .pipe(dest('dist/img'));
+}
+
+function webpImage() {
+    return src('dist/img/*')
+        .pipe(imagewebp())
+        .pipe(dest('dist/img'))
 }
 
 var cbString = new Date().getTime();
@@ -56,7 +63,7 @@ function watchTask(){
 }
 
 exports.default = series(
-    parallel(scssTask, jsTask, img), 
+    parallel(scssTask, jsTask, img, webpImage), 
     cacheBustTask,
     watchTask
 );
