@@ -40,7 +40,7 @@ function jsTask(){
 function img() {
     return src('./src/img/*')
         .pipe(imagemin())
-        .pipe(dest('dist/img'));
+        .pipe(dest('dist'));
 }
 
 var cbString = new Date().getTime();
