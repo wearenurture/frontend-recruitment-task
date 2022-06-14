@@ -63,7 +63,7 @@ function watchTask(){
 }
 
 exports.default = series(
-    parallel(scssTask, jsTask, img, webpImage), 
+    scssTask, jsTask, img, webpImage, 
     cacheBustTask,
     watchTask
 );
