@@ -66,6 +66,7 @@ img {
     font-size: 42px;
     font-weight: 700;
     line-height: 50.4px;
+    color: #121212;
 
     @media screen and(max-width: 1000px) {
         width: 95%;
@@ -84,6 +85,7 @@ img {
     font-size: 16px;
     font-weight: 300;
     line-height: 24px;
+    color: #121212;
 
     @media screen and(max-width: 1000px) {
         width: 95%;
@@ -174,6 +176,7 @@ img {
       background: url('../../images/x-icon.png');
       background-repeat: no-repeat;
       padding: 0;
+      border: none;
 
       @media screen and(max-width: 751px) {
         margin-bottom: 0;
