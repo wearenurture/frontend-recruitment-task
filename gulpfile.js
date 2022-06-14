@@ -8,6 +8,8 @@ const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 var replace = require('gulp-replace');
+const imagemin = require('gulp-imagemin');
+
 
 // File paths
 const files = { 
@@ -35,6 +37,12 @@ function jsTask(){
     );
 }
 
+function img() {
+    return src('./src/img/*')
+        .pipe(imagemin())
+        .pipe(dest('dist/img'));
+}
+
 var cbString = new Date().getTime();
 function cacheBustTask(){
     return src(['index.html'])
@@ -48,7 +56,7 @@ function watchTask(){
 }
 
 exports.default = series(
-    parallel(scssTask, jsTask), 
+    parallel(scssTask, jsTask, img), 
     cacheBustTask,
     watchTask
 );
