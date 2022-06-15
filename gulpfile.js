@@ -44,11 +44,11 @@ function img() {
         .pipe(dest('dist/img'));
 }
 
-function webpImage() {
-    return src('dist/img/*')
-        .pipe(imagewebp())
-        .pipe(dest('dist/img'))
-}
+// function webpImage() {
+//     return src('dist/img/*')
+//         .pipe(imagewebp())
+//         .pipe(dest('dist/img'))
+// }
 
 var cbString = new Date().getTime();
 function cacheBustTask(){
@@ -63,7 +63,7 @@ function watchTask(){
 }
 
 exports.default = series(
-    scssTask, jsTask, img, webpImage, 
+    scssTask, jsTask, img, 
     cacheBustTask,
     watchTask
 );
