@@ -27,7 +27,8 @@ const createModal = () => {
     button_close.classList.add('modal__close');
     button_close.setAttribute('aria-label', 'Close modal');
     button_close.setAttribute('data-micromodal-close', true);
-    button_close.src = './dist/img/x-icon.png';
+    button_close.src = './dist/img/x-icon.webp';
+    button_close.alt = "close popup"
 
     const header = document.createElement('header');
 
@@ -104,13 +105,12 @@ const createImage = (alt, title, desktop_img, mobile_img) => {
     
     const img1 = document.createElement('img');
     const img2 = document.createElement('img');
-    alt ? img1.alt = alt : img1.alt = "";
-    alt ? img2.alt = alt : img2.alt = "";
-    title ? img1.title = title : "";
-    title ? img2.title = title : "";
 
     img1.src = desktop_img;
     img2.src = mobile_img;
+
+    alt ? img.alt = alt : img.alt = "";
+    title ? img.title = title : "";
 
     img.srcset = `${mobile_img} 480w, ${desktop_img} 784w`;
     img.sizes = `(max-width: 1000px) 480px, 784px`;
