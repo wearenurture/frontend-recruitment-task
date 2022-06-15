@@ -1,7 +1,8 @@
-
+//
 const title = "Lorem ipsum";
 const text = "Infinitely scalable, feature-rich and cloud-native data management and protection for modern and legacy infrastructures and SaaS platforms, managed via a single app with no hardware required."
-
+const desktop_img = "./dist/img/desktop.webp";
+const mobile_img = "./dist/img/mobile.webp";
 
 //popup modal
 
@@ -22,10 +23,11 @@ const createModal = () => {
     modal_container.setAttribute('aria-modal', true);
     modal_container.setAttribute('aria-labelledby', 'modal-1-title');
 
-    const button_close = document.createElement('button');
+    const button_close = document.createElement('img');
     button_close.classList.add('modal__close');
     button_close.setAttribute('aria-label', 'Close modal');
     button_close.setAttribute('data-micromodal-close', true);
+    button_close.src = './dist/img/x-icon.png';
 
     const header = document.createElement('header');
 
@@ -96,10 +98,23 @@ const createContainer = () => {
     return container;  
 }
 
-const createImage = (alt, title) => {
+const createImage = (alt, title, desktop_img, mobile_img) => {
+    // mobile_img ? mobile_img = mobile_img : mobile_img = desktop_img;
     const img = new Image();
-    alt ? img.alt = alt : img.alt = "";
-    title ? img.title = title : "";
+    
+    const img1 = document.createElement('img');
+    const img2 = document.createElement('img');
+    alt ? img1.alt = alt : img1.alt = "";
+    alt ? img2.alt = alt : img2.alt = "";
+    title ? img1.title = title : "";
+    title ? img2.title = title : "";
+
+    img1.src = desktop_img;
+    img2.src = mobile_img;
+
+    img.srcset = `${mobile_img} 480w, ${desktop_img} 784w`;
+    img.sizes = `(max-width: 1000px) 480px, 784px`;
+    img.src = mobile_img;
 
     return img;
 }
@@ -141,7 +156,7 @@ const createButton = (class_name) => {
 //@param img_alt
 //@param img_title
 
-const createSection = (class_name, title, content, img_alt, img_title) => {
+const createSection = (class_name, title, content, img_alt, img_title, desktop_img, mobile_img) => {
     const section = document.createElement("section");
     section.classList.add(class_name);
     
@@ -150,7 +165,7 @@ const createSection = (class_name, title, content, img_alt, img_title) => {
     const left_container = createContainer();
     left_container.classList.add(`${class_name}__left_container`);
    
-    const img = createImage(img_alt, img_title);
+    const img = createImage(img_alt, img_title, desktop_img, mobile_img);
 
     //create right container
 
@@ -178,7 +193,7 @@ const createSection = (class_name, title, content, img_alt, img_title) => {
     return section;
 }
 
-const module = createSection("module", title, text, "alternatywny tekst", "tytuł obrazka");
+const module = createSection("module", title, text, "alternatywny tekst", "tytuł obrazka", desktop_img, mobile_img);
 
 
 document.body.appendChild(module);
