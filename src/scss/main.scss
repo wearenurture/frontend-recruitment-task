@@ -161,6 +161,10 @@ img {
       line-height: 120%;
       color: #121212;
 
+      @media screen and(max-width: 751px) {
+       font-size: 36px;
+    }
+
       @media screen and(max-width: 1000px) {
           margin-left: 5%;
       }
@@ -218,8 +222,9 @@ img {
     font-family: 'Roboto', sans-serif;
 
     @media screen and(max-width: 751px) {
-        margin-top: 10px;
+        margin-top: 15px;
         margin-bottom: 0;
+        margin-left: calc(50% - 77px)
     }
 
     @media screen and(max-width: 1000px) {
