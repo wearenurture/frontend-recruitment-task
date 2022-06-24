@@ -1,8 +1,9 @@
-//
+//constants
 const title = "Lorem ipsum";
 const text = "Infinitely scalable, feature-rich and cloud-native data management and protection for modern and legacy infrastructures and SaaS platforms, managed via a single app with no hardware required."
 const desktop_img = "./dist/img/desktop.webp";
 const mobile_img = "./dist/img/mobile.webp";
+const url = "https://jsonplaceholder.typicode.com/users";
 
 //popup modal
 
@@ -197,3 +198,70 @@ const module = createSection("module", title, text, "alternatywny tekst", "tytuÅ
 
 
 document.body.appendChild(module);
+
+
+//additional-task creating table with fetched data
+
+const placeForTable = document.querySelector('.modal__container');
+
+const createTable = (data) => {
+
+    const table = document.createElement('table');
+    const thaed = document.createElement('thead');
+    const tbody = document.createElement('tbody');
+
+    thaed.innerHTML =
+        `
+        <tr>
+            <th>
+                ImiÄ™ i nazwisko
+            </th>
+            <th>
+                Email
+            </th>
+            <th>
+                Adres
+            </th>
+            <th>
+                Telefon
+            </th>
+            <th>
+                Nazwa firmy
+            </th>
+        </tr>
+        `
+
+    data.map(row => {
+        const line = document.createElement('tr');
+        line.innerHTML =
+        `<tr>
+            <td>${row?.name}</td>
+            <td>${row?.email}</td>
+            <td>${row?.address?.city}, ${row?.address?.street}, ${row?.address?.suite}</td>
+            <td>${row?.phone}</td>
+            <td>${row?.company?.name}</td>
+        </tr>`
+
+        tbody.appendChild(line);
+    });        
+    
+    table.appendChild(thaed);
+    table.appendChild(tbody);
+
+    return table;
+}
+  
+
+const getDataFromEndpointAndAddTable = () => {
+    try {
+            fetch(url)
+            .then(response => response.json())
+            .then(data => createTable(data))
+            .then(table => placeForTable.appendChild(table))
+        } catch (error) {
+            console.log(error)
+        }
+}
+    
+getDataFromEndpointAndAddTable();
+
