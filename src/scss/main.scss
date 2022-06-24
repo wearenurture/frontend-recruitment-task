@@ -214,7 +214,7 @@ img {
     padding: 10px 10px;
     border: none;
     background-color: #E4C1AE;
-    font-weight: 700;
+    font-weight: normal;
     font-size: 16px;
     line-height: 100%;
     color: #fff;
@@ -234,4 +234,52 @@ img {
 
   .hidden {
       display: none;
+  }
+
+  table {
+    margin: 30px 15px;
+    border-collapse: collapse;
+    font-size: 14px;
+    background-color: #E4C1AE;
+    font-family: 'Roboto', sans-serif;
+
+    @media screen and(max-width: 850px) {
+        margin: 20px 0;
+    }
+  }
+
+  td {
+    border: 1px solid #fff;
+    padding: 5px;
+
+    @media screen and(max-width: 850px) {
+        font-size: 12px;
+        padding: 2px;
+        max-width: 15vw;
+        overflow-wrap: break-word
+    }
+
+    @media screen and(max-width: 680px) {
+        font-size: 8px;
+        padding: 0;
+    }
+  }
+
+  th {
+    background-color: rgba(0,0,0,0.3);
+    color: #fff;
+    border: 1px solid #fff;
+    font-size: 16px;
+    padding: 12px 5px;
+    font-weight: normal;
+
+    @media screen and(max-width: 850px) {
+        font-size: 12px;
+        padding: 3px;
+    }
+
+    @media screen and(max-width: 680px) {
+        font-size: 8px;
+        padding: 0;
+    }
   }
