@@ -1,9 +1,12 @@
+
 //constants
 const title = "Lorem ipsum";
 const text = "Infinitely scalable, feature-rich and cloud-native data management and protection for modern and legacy infrastructures and SaaS platforms, managed via a single app with no hardware required."
 const desktop_img = "./dist/img/desktop.webp";
 const mobile_img = "./dist/img/mobile.webp";
 const url = "https://jsonplaceholder.typicode.com/users";
+
+
 
 //popup modal
 
@@ -16,7 +19,7 @@ const createModal = () => {
     const modal_overlay = document.createElement('div');
     modal_overlay.classList.add('modal__overlay');
     modal_overlay.setAttribute('tabindex', -1);
-    modal_overlay.setAttribute('data-micromodal-close', true);
+    modal_overlay.setAttribute('data-micromodal-close', "modal-1");
 
     const modal_container = document.createElement('div');
     modal_container.classList.add('modal__container');
@@ -89,8 +92,10 @@ const checkAndWriteClickToLocalStorage = () => {
 const onClickHandler = () => {
     MicroModal.show('modal-1');
     checkAndWriteClickToLocalStorage();
+    removeTableFromDOM();
+    addLoaderToDOM();
+    // addTableToDOM();
 }
-
 
 //modal - section
 
@@ -143,7 +148,8 @@ const createContentText = (text, class_name) => {
 const createButton = (class_name) => {
     const button = document.createElement("button");
     button.innerText = "Button";
-    button.classList.add(`${class_name}__button`)
+    button.classList.add(`${class_name}__button`);
+    button.setAttribute('data-micromodal-trigger', true)
     button.setAttribute('aria-description', 'kliknij przycisk by otworzyć popup');
     button.addEventListener('click', () => onClickHandler())
 
@@ -207,6 +213,7 @@ const placeForTable = document.querySelector('.modal__container');
 const createTable = (data) => {
 
     const table = document.createElement('table');
+    table.className = "modal__table"
     const thaed = document.createElement('thead');
     const tbody = document.createElement('tbody');
 
@@ -251,17 +258,40 @@ const createTable = (data) => {
     return table;
 }
   
+let data;
 
-const getDataFromEndpointAndAddTable = () => {
+const getDataFromEndpoint = async () => {
+    
     try {
-            fetch(url)
-            .then(response => response.json())
-            .then(data => createTable(data))
-            .then(table => placeForTable.appendChild(table))
+        return await fetch(url)
+            .then(response => response.json())    
         } catch (error) {
             console.log(error)
-        }
+    }
+
 }
-    
-getDataFromEndpointAndAddTable();
+
+const addTableToDOM = async () => {
+    await getDataFromEndpoint()
+        .then(res => createTable(res))
+        .then(table => {
+            const loader = document.querySelector('#loader');
+            loader.remove();
+            placeForTable.appendChild(table);
+        })
+}
+
+const removeTableFromDOM = () => {
+    const table = placeForTable.querySelector('.modal__table');
+    table ? table.remove() : null;
+}
+
+const addLoaderToDOM = () => {
+    const loader = document.createElement('img');
+    loader.src = "../src/img/load-loading.gif";
+    loader.setAttribute('id', 'loader');
+
+    placeForTable.appendChild(loader)
+}
+
 
